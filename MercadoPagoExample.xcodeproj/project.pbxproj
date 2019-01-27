@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E6C334346B9F0CD553E868C /* Pods_MercadoPagoExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F56B3937DBB54FFA46609ED /* Pods_MercadoPagoExampleTests.framework */; };
 		8E53D36D21FE468500EACCE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D36C21FE468500EACCE3 /* AppDelegate.swift */; };
 		8E53D36F21FE468500EACCE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D36E21FE468500EACCE3 /* ViewController.swift */; };
 		8E53D37221FE468500EACCE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E53D37021FE468500EACCE3 /* Main.storyboard */; };
 		8E53D37421FE468900EACCE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E53D37321FE468900EACCE3 /* Assets.xcassets */; };
 		8E53D37721FE468900EACCE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E53D37521FE468900EACCE3 /* LaunchScreen.storyboard */; };
 		8E53D38221FE468A00EACCE3 /* MercadoPagoExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D38121FE468A00EACCE3 /* MercadoPagoExampleTests.swift */; };
+		F1EFF95C8FEC6F8391A1535A /* Pods_MercadoPagoExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A207B25748AB439428D23C /* Pods_MercadoPagoExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00639ED33186C277C1B8E17B /* Pods-MercadoPagoExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPagoExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPagoExampleTests/Pods-MercadoPagoExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		06EE817D1F5F629197025665 /* Pods-MercadoPagoExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPagoExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPagoExample/Pods-MercadoPagoExample.release.xcconfig"; sourceTree = "<group>"; };
+		0F56B3937DBB54FFA46609ED /* Pods_MercadoPagoExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoPagoExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11A207B25748AB439428D23C /* Pods_MercadoPagoExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoPagoExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37278CF8E99064A26CCA9BC4 /* Pods-MercadoPagoExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPagoExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPagoExample/Pods-MercadoPagoExample.debug.xcconfig"; sourceTree = "<group>"; };
+		67A429D8CDE1D9223263490D /* Pods-MercadoPagoExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPagoExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPagoExampleTests/Pods-MercadoPagoExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8E53D36921FE468500EACCE3 /* MercadoPagoExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoPagoExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E53D36C21FE468500EACCE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E53D36E21FE468500EACCE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1EFF95C8FEC6F8391A1535A /* Pods_MercadoPagoExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E6C334346B9F0CD553E868C /* Pods_MercadoPagoExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AEFDE575F2E7AFCA6F8DE58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11A207B25748AB439428D23C /* Pods_MercadoPagoExample.framework */,
+				0F56B3937DBB54FFA46609ED /* Pods_MercadoPagoExampleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E53D36021FE468500EACCE3 = {
 			isa = PBXGroup;
 			children = (
 				8E53D36B21FE468500EACCE3 /* MercadoPagoExample */,
 				8E53D38021FE468A00EACCE3 /* MercadoPagoExampleTests */,
 				8E53D36A21FE468500EACCE3 /* Products */,
+				D87257E979D04C6CE46F7E3B /* Pods */,
+				6AEFDE575F2E7AFCA6F8DE58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +117,17 @@
 			path = MercadoPagoExampleTests;
 			sourceTree = "<group>";
 		};
+		D87257E979D04C6CE46F7E3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37278CF8E99064A26CCA9BC4 /* Pods-MercadoPagoExample.debug.xcconfig */,
+				06EE817D1F5F629197025665 /* Pods-MercadoPagoExample.release.xcconfig */,
+				67A429D8CDE1D9223263490D /* Pods-MercadoPagoExampleTests.debug.xcconfig */,
+				00639ED33186C277C1B8E17B /* Pods-MercadoPagoExampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E53D38621FE468A00EACCE3 /* Build configuration list for PBXNativeTarget "MercadoPagoExample" */;
 			buildPhases = (
+				1CFAAC7B053857616E7CCCC3 /* [CP] Check Pods Manifest.lock */,
 				8E53D36521FE468500EACCE3 /* Sources */,
 				8E53D36621FE468500EACCE3 /* Frameworks */,
 				8E53D36721FE468500EACCE3 /* Resources */,
+				43DDF67DDDD48809CE324C47 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E53D38921FE468A00EACCE3 /* Build configuration list for PBXNativeTarget "MercadoPagoExampleTests" */;
 			buildPhases = (
+				BC322F2CE5B8CD0427ED9786 /* [CP] Check Pods Manifest.lock */,
 				8E53D37921FE468A00EACCE3 /* Sources */,
 				8E53D37A21FE468A00EACCE3 /* Frameworks */,
 				8E53D37B21FE468A00EACCE3 /* Resources */,
@@ -191,6 +226,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CFAAC7B053857616E7CCCC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MercadoPagoExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43DDF67DDDD48809CE324C47 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MercadoPagoExample/Pods-MercadoPagoExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MercadoPagoExample/Pods-MercadoPagoExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC322F2CE5B8CD0427ED9786 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MercadoPagoExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E53D36521FE468500EACCE3 /* Sources */ = {
@@ -358,6 +462,7 @@
 		};
 		8E53D38721FE468A00EACCE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37278CF8E99064A26CCA9BC4 /* Pods-MercadoPagoExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +481,7 @@
 		};
 		8E53D38821FE468A00EACCE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06EE817D1F5F629197025665 /* Pods-MercadoPagoExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +500,7 @@
 		};
 		8E53D38A21FE468A00EACCE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67A429D8CDE1D9223263490D /* Pods-MercadoPagoExampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +522,7 @@
 		};
 		8E53D38B21FE468A00EACCE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00639ED33186C277C1B8E17B /* Pods-MercadoPagoExampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
