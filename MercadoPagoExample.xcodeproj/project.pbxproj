@@ -54,6 +54,7 @@
 		8E53D3F121FF461700EACCE3 /* MPEApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3F021FF461700EACCE3 /* MPEApi.swift */; };
 		8E53D3F421FF479B00EACCE3 /* AlamoFireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3F321FF479B00EACCE3 /* AlamoFireClient.swift */; };
 		8E53D3F621FF4DE800EACCE3 /* UrlSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3F521FF4DE800EACCE3 /* UrlSessionClient.swift */; };
+		8ECD0C482200FFB000687E0F /* AmountInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ECD0C472200FFB000687E0F /* AmountInputViewController.xib */; };
 		8ED35D9E21FFBFDB0059F16B /* PaymentSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED35D9D21FFBFDB0059F16B /* PaymentSelectionViewController.xib */; };
 		8ED35DA621FFE9770059F16B /* StandardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED35DA421FFE9770059F16B /* StandardTableViewCell.swift */; };
 		8ED35DA721FFE9770059F16B /* StandardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED35DA521FFE9770059F16B /* StandardTableViewCell.xib */; };
@@ -133,6 +134,7 @@
 		8E53D3F021FF461700EACCE3 /* MPEApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPEApi.swift; sourceTree = "<group>"; };
 		8E53D3F321FF479B00EACCE3 /* AlamoFireClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireClient.swift; sourceTree = "<group>"; };
 		8E53D3F521FF4DE800EACCE3 /* UrlSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionClient.swift; sourceTree = "<group>"; };
+		8ECD0C472200FFB000687E0F /* AmountInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmountInputViewController.xib; sourceTree = "<group>"; };
 		8ED35D9D21FFBFDB0059F16B /* PaymentSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentSelectionViewController.xib; sourceTree = "<group>"; };
 		8ED35DA421FFE9770059F16B /* StandardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTableViewCell.swift; sourceTree = "<group>"; };
 		8ED35DA521FFE9770059F16B /* StandardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandardTableViewCell.xib; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		8E53D38E21FE4AE400EACCE3 /* AmountInput */ = {
 			isa = PBXGroup;
 			children = (
+				8ECD0C462200FF8E00687E0F /* Views */,
 				8E53D39721FE4DC300EACCE3 /* AmountInputPresenter.swift */,
 				8E53D39821FE4DC300EACCE3 /* AmountInputWorker.swift */,
 				8E53D39921FE4DC300EACCE3 /* AmountInputRouter.swift */,
@@ -353,6 +356,14 @@
 				8E53D3F521FF4DE800EACCE3 /* UrlSessionClient.swift */,
 			);
 			path = Clients;
+			sourceTree = "<group>";
+		};
+		8ECD0C462200FF8E00687E0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8ECD0C472200FFB000687E0F /* AmountInputViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8ED35D9F21FFDE260059F16B /* Views */ = {
@@ -503,6 +514,7 @@
 			files = (
 				8E53D3EF21FF417C00EACCE3 /* GET_bank_issuers_200.json in Resources */,
 				8ED35DAB21FFEFA30059F16B /* BankSelectionViewController.xib in Resources */,
+				8ECD0C482200FFB000687E0F /* AmountInputViewController.xib in Resources */,
 				8E53D37721FE468900EACCE3 /* LaunchScreen.storyboard in Resources */,
 				8ED35DB3220086580059F16B /* InstallmentTableViewCell.xib in Resources */,
 				8ED35D9E21FFBFDB0059F16B /* PaymentSelectionViewController.xib in Resources */,

@@ -20,6 +20,7 @@ protocol PaymentSelectionBusinessLogic {
 protocol PaymentSelectionDataStore {
     var paymentMethods: PaymentMethodsResponse! { get set }
     var bankIssuers: BanksResponse! { get set }
+    var amount: String! { get set }
 }
 
 class PaymentSelectionInteractor: PaymentSelectionBusinessLogic, PaymentSelectionDataStore {
@@ -28,6 +29,7 @@ class PaymentSelectionInteractor: PaymentSelectionBusinessLogic, PaymentSelectio
 
     var paymentMethods: PaymentMethodsResponse!
     var bankIssuers: BanksResponse!
+    var amount: String!
 
     let mpeApi: MPEApi
 

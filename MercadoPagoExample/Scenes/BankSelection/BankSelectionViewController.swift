@@ -68,6 +68,7 @@ class BankSelectionViewController: UIViewController, BankSelectionDisplayLogic {
     }
 
     private func setupViews() {
+        title = "Issuers"
         setupBankIssuersTableView()
     }
 

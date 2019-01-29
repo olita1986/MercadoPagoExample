@@ -13,16 +13,18 @@
 import UIKit
 
 protocol AmountInputPresentationLogic {
-    func presentSomething(response: AmountInput.Something.Response)
+    func presentEnabledContinueButton()
+    func presentDisabledContinueButton()
 }
 
 class AmountInputPresenter: AmountInputPresentationLogic {
     weak var viewController: AmountInputDisplayLogic?
 
-    // MARK: Do something
+    func presentEnabledContinueButton() {
+        viewController?.displayEnabledContinueButton()
+    }
 
-    func presentSomething(response: AmountInput.Something.Response) {
-        let viewModel = AmountInput.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentDisabledContinueButton() {
+        viewController?.displayDisabledContinueButton()
     }
 }

@@ -63,6 +63,7 @@ class InstallmentSelectionViewController: UIViewController, InstallmentSelection
     }
 
     private func setupViews() {
+        title = "Installments"
         setupInstallmentsTableView()
     }
 

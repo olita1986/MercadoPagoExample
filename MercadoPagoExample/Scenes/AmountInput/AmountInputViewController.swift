@@ -13,13 +13,16 @@
 import UIKit
 
 protocol AmountInputDisplayLogic: class {
-    func displaySomething(viewModel: AmountInput.Something.ViewModel)
+    func displayEnabledContinueButton()
+    func displayDisabledContinueButton()
 }
 
 class AmountInputViewController: UIViewController, AmountInputDisplayLogic {
     var interactor: AmountInputBusinessLogic?
     var router: (NSObjectProtocol & AmountInputRoutingLogic & AmountInputDataPassing)?
 
+    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var amountTextField: UITextField!
     // MARK: Object lifecycle
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -47,34 +50,60 @@ class AmountInputViewController: UIViewController, AmountInputDisplayLogic {
         router.dataStore = interactor
     }
 
-    // MARK: Routing
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
-
     // MARK: View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        setupViews()
     }
 
-    // MARK: Do something
-
-    //@IBOutlet weak var nameTextField: UITextField!
-
-    func doSomething() {
-        let request = AmountInput.Something.Request()
-        interactor?.doSomething(request: request)
+    func setupViews() {
+        title = "Enter Amount"
+        setupGestureRecognizer()
+        setupAmountTextField()
+        setupContinueButton()
     }
 
-    func displaySomething(viewModel: AmountInput.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    func setupGestureRecognizer() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
+
+    func setupAmountTextField() {
+        amountTextField.delegate = self
+        amountTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+
+    func setupContinueButton() {
+        continueButton.isEnabled = false
+        continueButton.backgroundColor = .gray
+    }
+
+    @objc private func textFieldDidChange(_ textField: UITextField) {
+        guard let text = textField.text else { return }
+        interactor?.textFieldDidChange(text: text)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
+    @IBAction func continueButtonPressed(_ sender: Any) {
+        print("pressed")
+        dismissKeyboard()
+        router?.routeToPaymentSelection()
+    }
+
+    func displayEnabledContinueButton() {
+        continueButton.isEnabled = true
+        continueButton.backgroundColor = UIColor(red: 0.457, green: 0.819, blue: 1, alpha: 1)
+    }
+
+    func displayDisabledContinueButton() {
+        setupContinueButton()
+    }
+}
+
+extension AmountInputViewController: UITextFieldDelegate {
+
 }

@@ -13,25 +13,26 @@
 import UIKit
 
 protocol AmountInputBusinessLogic {
-    func doSomething(request: AmountInput.Something.Request)
+    func textFieldDidChange(text: String)
 }
 
 protocol AmountInputDataStore {
-    //var name: String { get set }
+    var amount: String! { get set }
 }
 
 class AmountInputInteractor: AmountInputBusinessLogic, AmountInputDataStore {
     var presenter: AmountInputPresentationLogic?
     var worker: AmountInputWorker?
-    //var name: String = ""
 
-    // MARK: Do something
+    var amount: String!
 
-    func doSomething(request: AmountInput.Something.Request) {
-        worker = AmountInputWorker()
-        worker?.doSomeWork()
-
-        let response = AmountInput.Something.Response()
-        presenter?.presentSomething(response: response)
+    func textFieldDidChange(text: String) {
+        if let amount = Int(text), amount > 10 {
+            self.amount = String(amount)
+            presenter?.presentEnabledContinueButton()
+        } else {
+            presenter?.presentDisabledContinueButton()
+        }
     }
+
 }

@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol AmountInputRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToPaymentSelection()
 }
 
 protocol AmountInputDataPassing {
@@ -26,32 +26,24 @@ class AmountInputRouter: NSObject, AmountInputRoutingLogic, AmountInputDataPassi
 
     // MARK: Routing
 
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
-    //{
-    //  if let segue = segue {
-    //    let destinationVC = segue.destination as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //  } else {
-    //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-    //  }
-    //}
+    func routeToPaymentSelection() {
+        let destinationVC = PaymentSelectionViewController()
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToPaymentSelection(source: dataStore!, destination: &destinationDS)
+        navigateToPaymentSelection(source: viewController!, destination: destinationVC)
+    }
 
     // MARK: Navigation
 
-    //func navigateToSomewhere(source: AmountInputViewController, destination: SomewhereViewController)
-    //{
-    //  source.show(destination, sender: nil)
-    //}
+    func navigateToPaymentSelection(source: AmountInputViewController, destination: PaymentSelectionViewController)
+    {
+      source.navigationController?.pushViewController(destination, animated: true)
+    }
 
-    // MARK: Passing data
+//     MARK: Passing data
 
-    //func passDataToSomewhere(source: AmountInputDataStore, destination: inout SomewhereDataStore)
-    //{
-    //  destination.name = source.name
-    //}
+    func passDataToPaymentSelection(source: AmountInputDataStore, destination: inout PaymentSelectionDataStore)
+    {
+      destination.amount = source.amount
+    }
 }

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if Configuration.Stubs.isEnable {
             Stubs().enableStubs()
         }
-        let navController = UINavigationController(rootViewController: PaymentSelectionViewController())
+        let navController = UINavigationController(rootViewController: AmountInputViewController())
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = navController
