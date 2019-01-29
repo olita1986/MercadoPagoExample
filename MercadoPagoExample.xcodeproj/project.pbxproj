@@ -9,11 +9,55 @@
 /* Begin PBXBuildFile section */
 		3E6C334346B9F0CD553E868C /* Pods_MercadoPagoExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F56B3937DBB54FFA46609ED /* Pods_MercadoPagoExampleTests.framework */; };
 		8E53D36D21FE468500EACCE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D36C21FE468500EACCE3 /* AppDelegate.swift */; };
-		8E53D36F21FE468500EACCE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D36E21FE468500EACCE3 /* ViewController.swift */; };
-		8E53D37221FE468500EACCE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E53D37021FE468500EACCE3 /* Main.storyboard */; };
 		8E53D37421FE468900EACCE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E53D37321FE468900EACCE3 /* Assets.xcassets */; };
 		8E53D37721FE468900EACCE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E53D37521FE468900EACCE3 /* LaunchScreen.storyboard */; };
 		8E53D38221FE468A00EACCE3 /* MercadoPagoExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D38121FE468A00EACCE3 /* MercadoPagoExampleTests.swift */; };
+		8E53D39521FE4C6800EACCE3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D39421FE4C6800EACCE3 /* Constants.swift */; };
+		8E53D39D21FE4DC300EACCE3 /* AmountInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D39721FE4DC300EACCE3 /* AmountInputPresenter.swift */; };
+		8E53D39E21FE4DC300EACCE3 /* AmountInputWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D39821FE4DC300EACCE3 /* AmountInputWorker.swift */; };
+		8E53D39F21FE4DC300EACCE3 /* AmountInputRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D39921FE4DC300EACCE3 /* AmountInputRouter.swift */; };
+		8E53D3A021FE4DC300EACCE3 /* AmountInputModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D39A21FE4DC300EACCE3 /* AmountInputModels.swift */; };
+		8E53D3A121FE4DC300EACCE3 /* AmountInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D39B21FE4DC300EACCE3 /* AmountInputViewController.swift */; };
+		8E53D3A221FE4DC300EACCE3 /* AmountInputInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D39C21FE4DC300EACCE3 /* AmountInputInteractor.swift */; };
+		8E53D3A921FE4DD300EACCE3 /* PaymentSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3A321FE4DD300EACCE3 /* PaymentSelectionPresenter.swift */; };
+		8E53D3AA21FE4DD300EACCE3 /* PaymentSelectionWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3A421FE4DD300EACCE3 /* PaymentSelectionWorker.swift */; };
+		8E53D3AB21FE4DD300EACCE3 /* PaymentSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3A521FE4DD300EACCE3 /* PaymentSelectionRouter.swift */; };
+		8E53D3AC21FE4DD300EACCE3 /* PaymentSelectionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3A621FE4DD300EACCE3 /* PaymentSelectionModels.swift */; };
+		8E53D3AD21FE4DD300EACCE3 /* PaymentSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3A721FE4DD300EACCE3 /* PaymentSelectionViewController.swift */; };
+		8E53D3AE21FE4DD300EACCE3 /* PaymentSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3A821FE4DD300EACCE3 /* PaymentSelectionInteractor.swift */; };
+		8E53D3B521FE4DE300EACCE3 /* BankSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3AF21FE4DE300EACCE3 /* BankSelectionPresenter.swift */; };
+		8E53D3B621FE4DE300EACCE3 /* BankSelectionWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3B021FE4DE300EACCE3 /* BankSelectionWorker.swift */; };
+		8E53D3B721FE4DE300EACCE3 /* BankSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3B121FE4DE300EACCE3 /* BankSelectionRouter.swift */; };
+		8E53D3B821FE4DE300EACCE3 /* BankSelectionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3B221FE4DE300EACCE3 /* BankSelectionModels.swift */; };
+		8E53D3B921FE4DE300EACCE3 /* BankSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3B321FE4DE300EACCE3 /* BankSelectionViewController.swift */; };
+		8E53D3BA21FE4DE300EACCE3 /* BankSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3B421FE4DE300EACCE3 /* BankSelectionInteractor.swift */; };
+		8E53D3C121FE4DFC00EACCE3 /* InstallmentSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3BB21FE4DFC00EACCE3 /* InstallmentSelectionPresenter.swift */; };
+		8E53D3C221FE4DFC00EACCE3 /* InstallmentSelectionWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3BC21FE4DFC00EACCE3 /* InstallmentSelectionWorker.swift */; };
+		8E53D3C321FE4DFC00EACCE3 /* InstallmentSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3BD21FE4DFC00EACCE3 /* InstallmentSelectionRouter.swift */; };
+		8E53D3C421FE4DFC00EACCE3 /* InstallmentSelectionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3BE21FE4DFC00EACCE3 /* InstallmentSelectionModels.swift */; };
+		8E53D3C521FE4DFC00EACCE3 /* InstallmentSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3BF21FE4DFC00EACCE3 /* InstallmentSelectionViewController.swift */; };
+		8E53D3C621FE4DFC00EACCE3 /* InstallmentSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3C021FE4DFC00EACCE3 /* InstallmentSelectionInteractor.swift */; };
+		8E53D3CD21FE4E0900EACCE3 /* SummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3C721FE4E0900EACCE3 /* SummaryPresenter.swift */; };
+		8E53D3CE21FE4E0900EACCE3 /* SummaryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3C821FE4E0900EACCE3 /* SummaryWorker.swift */; };
+		8E53D3CF21FE4E0900EACCE3 /* SummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3C921FE4E0900EACCE3 /* SummaryRouter.swift */; };
+		8E53D3D021FE4E0900EACCE3 /* SummaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3CA21FE4E0900EACCE3 /* SummaryModels.swift */; };
+		8E53D3D121FE4E0900EACCE3 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3CB21FE4E0900EACCE3 /* SummaryViewController.swift */; };
+		8E53D3D221FE4E0900EACCE3 /* SummaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3CC21FE4E0900EACCE3 /* SummaryInteractor.swift */; };
+		8E53D3D521FEA2EA00EACCE3 /* PaymentMethodsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3D421FEA2EA00EACCE3 /* PaymentMethodsResponse.swift */; };
+		8E53D3D721FEA56700EACCE3 /* BanksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3D621FEA56700EACCE3 /* BanksResponse.swift */; };
+		8E53D3DA21FEA7D900EACCE3 /* InstallmentsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3D921FEA7D900EACCE3 /* InstallmentsResponse.swift */; };
+		8E53D3E121FEB42A00EACCE3 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3E021FEB42700EACCE3 /* Stubs.swift */; };
+		8E53D3E821FF3A3200EACCE3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3E721FF3A3200EACCE3 /* Configuration.swift */; };
+		8E53D3ED21FF417C00EACCE3 /* GET_installments_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E53D3EA21FF417C00EACCE3 /* GET_installments_200.json */; };
+		8E53D3EE21FF417C00EACCE3 /* GET_payment_methods_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E53D3EB21FF417C00EACCE3 /* GET_payment_methods_200.json */; };
+		8E53D3EF21FF417C00EACCE3 /* GET_bank_issuers_200.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E53D3EC21FF417C00EACCE3 /* GET_bank_issuers_200.json */; };
+		8E53D3F121FF461700EACCE3 /* MPEApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3F021FF461700EACCE3 /* MPEApi.swift */; };
+		8E53D3F421FF479B00EACCE3 /* AlamoFireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3F321FF479B00EACCE3 /* AlamoFireClient.swift */; };
+		8E53D3F621FF4DE800EACCE3 /* UrlSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3F521FF4DE800EACCE3 /* UrlSessionClient.swift */; };
+		8ED35D9E21FFBFDB0059F16B /* PaymentSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED35D9D21FFBFDB0059F16B /* PaymentSelectionViewController.xib */; };
+		8ED35DA621FFE9770059F16B /* StandardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED35DA421FFE9770059F16B /* StandardTableViewCell.swift */; };
+		8ED35DA721FFE9770059F16B /* StandardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED35DA521FFE9770059F16B /* StandardTableViewCell.xib */; };
+		8ED35DAB21FFEFA30059F16B /* BankSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED35DAA21FFEFA30059F16B /* BankSelectionViewController.xib */; };
 		F1EFF95C8FEC6F8391A1535A /* Pods_MercadoPagoExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A207B25748AB439428D23C /* Pods_MercadoPagoExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,16 +78,62 @@
 		11A207B25748AB439428D23C /* Pods_MercadoPagoExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoPagoExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37278CF8E99064A26CCA9BC4 /* Pods-MercadoPagoExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPagoExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPagoExample/Pods-MercadoPagoExample.debug.xcconfig"; sourceTree = "<group>"; };
 		67A429D8CDE1D9223263490D /* Pods-MercadoPagoExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPagoExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPagoExampleTests/Pods-MercadoPagoExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8E53D36921FE468500EACCE3 /* MercadoPagoExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoPagoExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E53D36921FE468500EACCE3 /* MPE-Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MPE-Debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E53D36C21FE468500EACCE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E53D36E21FE468500EACCE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E53D37121FE468500EACCE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E53D37321FE468900EACCE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E53D37621FE468900EACCE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E53D37821FE468900EACCE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E53D37D21FE468A00EACCE3 /* MercadoPagoExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoPagoExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E53D38121FE468A00EACCE3 /* MercadoPagoExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoPagoExampleTests.swift; sourceTree = "<group>"; };
 		8E53D38321FE468A00EACCE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E53D39421FE4C6800EACCE3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8E53D39721FE4DC300EACCE3 /* AmountInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountInputPresenter.swift; sourceTree = "<group>"; };
+		8E53D39821FE4DC300EACCE3 /* AmountInputWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountInputWorker.swift; sourceTree = "<group>"; };
+		8E53D39921FE4DC300EACCE3 /* AmountInputRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountInputRouter.swift; sourceTree = "<group>"; };
+		8E53D39A21FE4DC300EACCE3 /* AmountInputModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountInputModels.swift; sourceTree = "<group>"; };
+		8E53D39B21FE4DC300EACCE3 /* AmountInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountInputViewController.swift; sourceTree = "<group>"; };
+		8E53D39C21FE4DC300EACCE3 /* AmountInputInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountInputInteractor.swift; sourceTree = "<group>"; };
+		8E53D3A321FE4DD300EACCE3 /* PaymentSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionPresenter.swift; sourceTree = "<group>"; };
+		8E53D3A421FE4DD300EACCE3 /* PaymentSelectionWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionWorker.swift; sourceTree = "<group>"; };
+		8E53D3A521FE4DD300EACCE3 /* PaymentSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionRouter.swift; sourceTree = "<group>"; };
+		8E53D3A621FE4DD300EACCE3 /* PaymentSelectionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionModels.swift; sourceTree = "<group>"; };
+		8E53D3A721FE4DD300EACCE3 /* PaymentSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionViewController.swift; sourceTree = "<group>"; };
+		8E53D3A821FE4DD300EACCE3 /* PaymentSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionInteractor.swift; sourceTree = "<group>"; };
+		8E53D3AF21FE4DE300EACCE3 /* BankSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSelectionPresenter.swift; sourceTree = "<group>"; };
+		8E53D3B021FE4DE300EACCE3 /* BankSelectionWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSelectionWorker.swift; sourceTree = "<group>"; };
+		8E53D3B121FE4DE300EACCE3 /* BankSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSelectionRouter.swift; sourceTree = "<group>"; };
+		8E53D3B221FE4DE300EACCE3 /* BankSelectionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSelectionModels.swift; sourceTree = "<group>"; };
+		8E53D3B321FE4DE300EACCE3 /* BankSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSelectionViewController.swift; sourceTree = "<group>"; };
+		8E53D3B421FE4DE300EACCE3 /* BankSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSelectionInteractor.swift; sourceTree = "<group>"; };
+		8E53D3BB21FE4DFC00EACCE3 /* InstallmentSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentSelectionPresenter.swift; sourceTree = "<group>"; };
+		8E53D3BC21FE4DFC00EACCE3 /* InstallmentSelectionWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentSelectionWorker.swift; sourceTree = "<group>"; };
+		8E53D3BD21FE4DFC00EACCE3 /* InstallmentSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentSelectionRouter.swift; sourceTree = "<group>"; };
+		8E53D3BE21FE4DFC00EACCE3 /* InstallmentSelectionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentSelectionModels.swift; sourceTree = "<group>"; };
+		8E53D3BF21FE4DFC00EACCE3 /* InstallmentSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentSelectionViewController.swift; sourceTree = "<group>"; };
+		8E53D3C021FE4DFC00EACCE3 /* InstallmentSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentSelectionInteractor.swift; sourceTree = "<group>"; };
+		8E53D3C721FE4E0900EACCE3 /* SummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPresenter.swift; sourceTree = "<group>"; };
+		8E53D3C821FE4E0900EACCE3 /* SummaryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryWorker.swift; sourceTree = "<group>"; };
+		8E53D3C921FE4E0900EACCE3 /* SummaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryRouter.swift; sourceTree = "<group>"; };
+		8E53D3CA21FE4E0900EACCE3 /* SummaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryModels.swift; sourceTree = "<group>"; };
+		8E53D3CB21FE4E0900EACCE3 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		8E53D3CC21FE4E0900EACCE3 /* SummaryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryInteractor.swift; sourceTree = "<group>"; };
+		8E53D3D421FEA2EA00EACCE3 /* PaymentMethodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsResponse.swift; sourceTree = "<group>"; };
+		8E53D3D621FEA56700EACCE3 /* BanksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksResponse.swift; sourceTree = "<group>"; };
+		8E53D3D921FEA7D900EACCE3 /* InstallmentsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsResponse.swift; sourceTree = "<group>"; };
+		8E53D3DC21FEAC8100EACCE3 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		8E53D3DD21FEAC8E00EACCE3 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		8E53D3E021FEB42700EACCE3 /* Stubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
+		8E53D3E721FF3A3200EACCE3 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		8E53D3EA21FF417C00EACCE3 /* GET_installments_200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GET_installments_200.json; sourceTree = "<group>"; };
+		8E53D3EB21FF417C00EACCE3 /* GET_payment_methods_200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GET_payment_methods_200.json; sourceTree = "<group>"; };
+		8E53D3EC21FF417C00EACCE3 /* GET_bank_issuers_200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GET_bank_issuers_200.json; sourceTree = "<group>"; };
+		8E53D3F021FF461700EACCE3 /* MPEApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPEApi.swift; sourceTree = "<group>"; };
+		8E53D3F321FF479B00EACCE3 /* AlamoFireClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireClient.swift; sourceTree = "<group>"; };
+		8E53D3F521FF4DE800EACCE3 /* UrlSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionClient.swift; sourceTree = "<group>"; };
+		8ED35D9D21FFBFDB0059F16B /* PaymentSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentSelectionViewController.xib; sourceTree = "<group>"; };
+		8ED35DA421FFE9770059F16B /* StandardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTableViewCell.swift; sourceTree = "<group>"; };
+		8ED35DA521FFE9770059F16B /* StandardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandardTableViewCell.xib; sourceTree = "<group>"; };
+		8ED35DAA21FFEFA30059F16B /* BankSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankSelectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +179,7 @@
 		8E53D36A21FE468500EACCE3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E53D36921FE468500EACCE3 /* MercadoPagoExample.app */,
+				8E53D36921FE468500EACCE3 /* MPE-Debug.app */,
 				8E53D37D21FE468A00EACCE3 /* MercadoPagoExampleTests.xctest */,
 			);
 			name = Products;
@@ -99,11 +189,14 @@
 			isa = PBXGroup;
 			children = (
 				8E53D36C21FE468500EACCE3 /* AppDelegate.swift */,
-				8E53D36E21FE468500EACCE3 /* ViewController.swift */,
-				8E53D37021FE468500EACCE3 /* Main.storyboard */,
 				8E53D37321FE468900EACCE3 /* Assets.xcassets */,
 				8E53D37521FE468900EACCE3 /* LaunchScreen.storyboard */,
 				8E53D37821FE468900EACCE3 /* Info.plist */,
+				8E53D3DB21FEAC5800EACCE3 /* Configuration */,
+				8E53D3D321FEA29F00EACCE3 /* Models */,
+				8E53D39321FE4C3500EACCE3 /* Utils */,
+				8E53D38D21FE4ACD00EACCE3 /* Scenes */,
+				8E53D38C21FE4ABA00EACCE3 /* API */,
 			);
 			path = MercadoPagoExample;
 			sourceTree = "<group>";
@@ -115,6 +208,177 @@
 				8E53D38321FE468A00EACCE3 /* Info.plist */,
 			);
 			path = MercadoPagoExampleTests;
+			sourceTree = "<group>";
+		};
+		8E53D38C21FE4ABA00EACCE3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8E53D3F221FF478600EACCE3 /* Clients */,
+				8E53D3F021FF461700EACCE3 /* MPEApi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8E53D38D21FE4ACD00EACCE3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8E53D39221FE4B8B00EACCE3 /* Summary */,
+				8E53D39121FE4B7B00EACCE3 /* InstallmentSelection */,
+				8E53D39021FE4B2E00EACCE3 /* BankSelection */,
+				8E53D38F21FE4AEF00EACCE3 /* PaymentSelection */,
+				8E53D38E21FE4AE400EACCE3 /* AmountInput */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8E53D38E21FE4AE400EACCE3 /* AmountInput */ = {
+			isa = PBXGroup;
+			children = (
+				8E53D39721FE4DC300EACCE3 /* AmountInputPresenter.swift */,
+				8E53D39821FE4DC300EACCE3 /* AmountInputWorker.swift */,
+				8E53D39921FE4DC300EACCE3 /* AmountInputRouter.swift */,
+				8E53D39A21FE4DC300EACCE3 /* AmountInputModels.swift */,
+				8E53D39B21FE4DC300EACCE3 /* AmountInputViewController.swift */,
+				8E53D39C21FE4DC300EACCE3 /* AmountInputInteractor.swift */,
+			);
+			path = AmountInput;
+			sourceTree = "<group>";
+		};
+		8E53D38F21FE4AEF00EACCE3 /* PaymentSelection */ = {
+			isa = PBXGroup;
+			children = (
+				8ED35D9F21FFDE260059F16B /* Views */,
+				8E53D3A321FE4DD300EACCE3 /* PaymentSelectionPresenter.swift */,
+				8E53D3A421FE4DD300EACCE3 /* PaymentSelectionWorker.swift */,
+				8E53D3A521FE4DD300EACCE3 /* PaymentSelectionRouter.swift */,
+				8E53D3A621FE4DD300EACCE3 /* PaymentSelectionModels.swift */,
+				8E53D3A721FE4DD300EACCE3 /* PaymentSelectionViewController.swift */,
+				8E53D3A821FE4DD300EACCE3 /* PaymentSelectionInteractor.swift */,
+			);
+			path = PaymentSelection;
+			sourceTree = "<group>";
+		};
+		8E53D39021FE4B2E00EACCE3 /* BankSelection */ = {
+			isa = PBXGroup;
+			children = (
+				8ED35DA821FFEF5E0059F16B /* Views */,
+				8E53D3AF21FE4DE300EACCE3 /* BankSelectionPresenter.swift */,
+				8E53D3B021FE4DE300EACCE3 /* BankSelectionWorker.swift */,
+				8E53D3B121FE4DE300EACCE3 /* BankSelectionRouter.swift */,
+				8E53D3B221FE4DE300EACCE3 /* BankSelectionModels.swift */,
+				8E53D3B321FE4DE300EACCE3 /* BankSelectionViewController.swift */,
+				8E53D3B421FE4DE300EACCE3 /* BankSelectionInteractor.swift */,
+			);
+			path = BankSelection;
+			sourceTree = "<group>";
+		};
+		8E53D39121FE4B7B00EACCE3 /* InstallmentSelection */ = {
+			isa = PBXGroup;
+			children = (
+				8E53D3BB21FE4DFC00EACCE3 /* InstallmentSelectionPresenter.swift */,
+				8E53D3BC21FE4DFC00EACCE3 /* InstallmentSelectionWorker.swift */,
+				8E53D3BD21FE4DFC00EACCE3 /* InstallmentSelectionRouter.swift */,
+				8E53D3BE21FE4DFC00EACCE3 /* InstallmentSelectionModels.swift */,
+				8E53D3BF21FE4DFC00EACCE3 /* InstallmentSelectionViewController.swift */,
+				8E53D3C021FE4DFC00EACCE3 /* InstallmentSelectionInteractor.swift */,
+			);
+			path = InstallmentSelection;
+			sourceTree = "<group>";
+		};
+		8E53D39221FE4B8B00EACCE3 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				8E53D3C721FE4E0900EACCE3 /* SummaryPresenter.swift */,
+				8E53D3C821FE4E0900EACCE3 /* SummaryWorker.swift */,
+				8E53D3C921FE4E0900EACCE3 /* SummaryRouter.swift */,
+				8E53D3CA21FE4E0900EACCE3 /* SummaryModels.swift */,
+				8E53D3CB21FE4E0900EACCE3 /* SummaryViewController.swift */,
+				8E53D3CC21FE4E0900EACCE3 /* SummaryInteractor.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
+		8E53D39321FE4C3500EACCE3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8ED35DA921FFEF700059F16B /* Helper Views */,
+				8E53D3E921FF407C00EACCE3 /* TestData */,
+				8E53D3E021FEB42700EACCE3 /* Stubs.swift */,
+				8E53D39421FE4C6800EACCE3 /* Constants.swift */,
+				8E53D3E721FF3A3200EACCE3 /* Configuration.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8E53D3D321FEA29F00EACCE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8E53D3D421FEA2EA00EACCE3 /* PaymentMethodsResponse.swift */,
+				8E53D3D621FEA56700EACCE3 /* BanksResponse.swift */,
+				8E53D3D921FEA7D900EACCE3 /* InstallmentsResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8E53D3DB21FEAC5800EACCE3 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8E53D3DC21FEAC8100EACCE3 /* Debug.xcconfig */,
+				8E53D3DD21FEAC8E00EACCE3 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		8E53D3E921FF407C00EACCE3 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				8E53D3EC21FF417C00EACCE3 /* GET_bank_issuers_200.json */,
+				8E53D3EA21FF417C00EACCE3 /* GET_installments_200.json */,
+				8E53D3EB21FF417C00EACCE3 /* GET_payment_methods_200.json */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+		8E53D3F221FF478600EACCE3 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				8E53D3F321FF479B00EACCE3 /* AlamoFireClient.swift */,
+				8E53D3F521FF4DE800EACCE3 /* UrlSessionClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		8ED35D9F21FFDE260059F16B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8ED35D9D21FFBFDB0059F16B /* PaymentSelectionViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8ED35DA321FFE9590059F16B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8ED35DA421FFE9770059F16B /* StandardTableViewCell.swift */,
+				8ED35DA521FFE9770059F16B /* StandardTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8ED35DA821FFEF5E0059F16B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8ED35DAA21FFEFA30059F16B /* BankSelectionViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8ED35DA921FFEF700059F16B /* Helper Views */ = {
+			isa = PBXGroup;
+			children = (
+				8ED35DA321FFE9590059F16B /* Cells */,
+			);
+			path = "Helper Views";
 			sourceTree = "<group>";
 		};
 		D87257E979D04C6CE46F7E3B /* Pods */ = {
@@ -147,7 +411,7 @@
 			);
 			name = MercadoPagoExample;
 			productName = MercadoPagoExample;
-			productReference = 8E53D36921FE468500EACCE3 /* MercadoPagoExample.app */;
+			productReference = 8E53D36921FE468500EACCE3 /* MPE-Debug.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8E53D37C21FE468A00EACCE3 /* MercadoPagoExampleTests */ = {
@@ -212,9 +476,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E53D3EF21FF417C00EACCE3 /* GET_bank_issuers_200.json in Resources */,
+				8ED35DAB21FFEFA30059F16B /* BankSelectionViewController.xib in Resources */,
 				8E53D37721FE468900EACCE3 /* LaunchScreen.storyboard in Resources */,
+				8ED35D9E21FFBFDB0059F16B /* PaymentSelectionViewController.xib in Resources */,
+				8ED35DA721FFE9770059F16B /* StandardTableViewCell.xib in Resources */,
 				8E53D37421FE468900EACCE3 /* Assets.xcassets in Resources */,
-				8E53D37221FE468500EACCE3 /* Main.storyboard in Resources */,
+				8E53D3ED21FF417C00EACCE3 /* GET_installments_200.json in Resources */,
+				8E53D3EE21FF417C00EACCE3 /* GET_payment_methods_200.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,12 +529,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MercadoPagoExample/Pods-MercadoPagoExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -301,8 +572,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E53D36F21FE468500EACCE3 /* ViewController.swift in Sources */,
+				8E53D3AB21FE4DD300EACCE3 /* PaymentSelectionRouter.swift in Sources */,
+				8E53D3B521FE4DE300EACCE3 /* BankSelectionPresenter.swift in Sources */,
+				8E53D3C321FE4DFC00EACCE3 /* InstallmentSelectionRouter.swift in Sources */,
+				8E53D3F121FF461700EACCE3 /* MPEApi.swift in Sources */,
+				8E53D3D121FE4E0900EACCE3 /* SummaryViewController.swift in Sources */,
+				8E53D3D521FEA2EA00EACCE3 /* PaymentMethodsResponse.swift in Sources */,
+				8E53D3CD21FE4E0900EACCE3 /* SummaryPresenter.swift in Sources */,
+				8E53D3A921FE4DD300EACCE3 /* PaymentSelectionPresenter.swift in Sources */,
+				8ED35DA621FFE9770059F16B /* StandardTableViewCell.swift in Sources */,
+				8E53D3AD21FE4DD300EACCE3 /* PaymentSelectionViewController.swift in Sources */,
+				8E53D3C621FE4DFC00EACCE3 /* InstallmentSelectionInteractor.swift in Sources */,
+				8E53D3BA21FE4DE300EACCE3 /* BankSelectionInteractor.swift in Sources */,
+				8E53D39D21FE4DC300EACCE3 /* AmountInputPresenter.swift in Sources */,
+				8E53D3B621FE4DE300EACCE3 /* BankSelectionWorker.swift in Sources */,
+				8E53D3B821FE4DE300EACCE3 /* BankSelectionModels.swift in Sources */,
+				8E53D3F421FF479B00EACCE3 /* AlamoFireClient.swift in Sources */,
+				8E53D3CE21FE4E0900EACCE3 /* SummaryWorker.swift in Sources */,
 				8E53D36D21FE468500EACCE3 /* AppDelegate.swift in Sources */,
+				8E53D3C521FE4DFC00EACCE3 /* InstallmentSelectionViewController.swift in Sources */,
+				8E53D3C221FE4DFC00EACCE3 /* InstallmentSelectionWorker.swift in Sources */,
+				8E53D39E21FE4DC300EACCE3 /* AmountInputWorker.swift in Sources */,
+				8E53D3E121FEB42A00EACCE3 /* Stubs.swift in Sources */,
+				8E53D3D021FE4E0900EACCE3 /* SummaryModels.swift in Sources */,
+				8E53D39521FE4C6800EACCE3 /* Constants.swift in Sources */,
+				8E53D3E821FF3A3200EACCE3 /* Configuration.swift in Sources */,
+				8E53D3D221FE4E0900EACCE3 /* SummaryInteractor.swift in Sources */,
+				8E53D3DA21FEA7D900EACCE3 /* InstallmentsResponse.swift in Sources */,
+				8E53D3B921FE4DE300EACCE3 /* BankSelectionViewController.swift in Sources */,
+				8E53D3CF21FE4E0900EACCE3 /* SummaryRouter.swift in Sources */,
+				8E53D3A121FE4DC300EACCE3 /* AmountInputViewController.swift in Sources */,
+				8E53D3A021FE4DC300EACCE3 /* AmountInputModels.swift in Sources */,
+				8E53D39F21FE4DC300EACCE3 /* AmountInputRouter.swift in Sources */,
+				8E53D3A221FE4DC300EACCE3 /* AmountInputInteractor.swift in Sources */,
+				8E53D3F621FF4DE800EACCE3 /* UrlSessionClient.swift in Sources */,
+				8E53D3C121FE4DFC00EACCE3 /* InstallmentSelectionPresenter.swift in Sources */,
+				8E53D3AA21FE4DD300EACCE3 /* PaymentSelectionWorker.swift in Sources */,
+				8E53D3B721FE4DE300EACCE3 /* BankSelectionRouter.swift in Sources */,
+				8E53D3D721FEA56700EACCE3 /* BanksResponse.swift in Sources */,
+				8E53D3AE21FE4DD300EACCE3 /* PaymentSelectionInteractor.swift in Sources */,
+				8E53D3C421FE4DFC00EACCE3 /* InstallmentSelectionModels.swift in Sources */,
+				8E53D3AC21FE4DD300EACCE3 /* PaymentSelectionModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,14 +635,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8E53D37021FE468500EACCE3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E53D37121FE468500EACCE3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8E53D37521FE468900EACCE3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -472,8 +774,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = OrlandoArzola.MercadoPagoExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = OrlandoArzola.MercadoPagoExample.debug;
+				PRODUCT_NAME = "MPE-Debug";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -491,8 +793,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = OrlandoArzola.MercadoPagoExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = OrlandoArzola.MercadoPagoExample.qa;
+				PRODUCT_NAME = "MPE-Release";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
