@@ -68,6 +68,7 @@ class PaymentSelectionViewController: UIViewController, PaymentSelectionDisplayL
     }
 
     private func setupViews() {
+        title = "Payment Methods"
         setupPaymentMethodsTableView()
     }
 

@@ -36,4 +36,10 @@ enum BankSelection {
             var message: String
         }
     }
+
+    enum Installment {
+        struct Request {
+            
+        }
+    }
 }

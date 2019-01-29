@@ -23,4 +23,21 @@ enum InstallmentSelection {
         struct ViewModel {
         }
     }
+
+    enum Installment {
+        struct Response {
+            var installmentsResponse: InstallmentsResponse
+        }
+
+        struct ViewModel {
+            struct DisplayedInstallment {
+                var recommendedMessage: String
+                var installments: String
+                var installmentValue: String
+                var totalAmount: String
+            }
+
+            var displayedInstallments: [DisplayedInstallment]
+        }
+    }
 }

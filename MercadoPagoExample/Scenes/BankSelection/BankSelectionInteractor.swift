@@ -14,10 +14,12 @@ import UIKit
 
 protocol BankSelectionBusinessLogic {
     func getBankIssuers()
+    func getInstallments(request: BankSelection.Installment.Request)
 }
 
 protocol BankSelectionDataStore {
     var bankIssuers: BanksResponse! { get set }
+    var installmentsResponse: InstallmentsResponse! { get set }
 }
 
 class BankSelectionInteractor: BankSelectionBusinessLogic, BankSelectionDataStore {
@@ -25,10 +27,25 @@ class BankSelectionInteractor: BankSelectionBusinessLogic, BankSelectionDataStor
     var worker: BankSelectionWorker?
 
     var bankIssuers: BanksResponse!
+    var installmentsResponse: InstallmentsResponse!
+
+    let mpeApi: MPEApi
+
+    init(mpeApi: MPEApi = MPEApi()) {
+        self.mpeApi = mpeApi
+    }
 
     func getBankIssuers() {
         let response = BankSelection.BankIssuers.Response(bankIssuersResponse: bankIssuers)
         presenter?.presentView(response: response)
     }
 
+    func getInstallments(request: BankSelection.Installment.Request) {
+        mpeApi.getInstallments(withPaymentMethodId: "", amount: "", issuerId: "") { [weak self](installments) in
+            if let installmentsResponse = installments {
+                self?.installmentsResponse = installmentsResponse
+                self?.presenter?.presentInstallments()
+            }
+        }
+    }
 }

@@ -14,6 +14,7 @@ import UIKit
 
 @objc protocol BankSelectionRoutingLogic {
     //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToInstallments()
 }
 
 protocol BankSelectionDataPassing {
@@ -26,32 +27,24 @@ class BankSelectionRouter: NSObject, BankSelectionRoutingLogic, BankSelectionDat
 
     // MARK: Routing
 
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
-    //{
-    //  if let segue = segue {
-    //    let destinationVC = segue.destination as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //  } else {
-    //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-    //  }
-    //}
+    func routeToInstallments() {
+        let destinationVC = InstallmentSelectionViewController()
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToInstallment(source: dataStore!, destination: &destinationDS)
+        navigateToInstallment(source: viewController!, destination: destinationVC)
+    }
 
     // MARK: Navigation
 
-    //func navigateToSomewhere(source: BankSelectionViewController, destination: SomewhereViewController)
-    //{
-    //  source.show(destination, sender: nil)
-    //}
+    func navigateToInstallment(source: BankSelectionViewController, destination: InstallmentSelectionViewController)
+    {
+      source.navigationController?.pushViewController(destination, animated: true)
+    }
 
     // MARK: Passing data
 
-    //func passDataToSomewhere(source: BankSelectionDataStore, destination: inout SomewhereDataStore)
-    //{
-    //  destination.name = source.name
-    //}
+    func passDataToInstallment(source: BankSelectionDataStore, destination: inout InstallmentSelectionDataStore)
+    {
+      destination.installmentsResponse = source.installmentsResponse
+    }
 }

@@ -13,25 +13,21 @@
 import UIKit
 
 protocol InstallmentSelectionBusinessLogic {
-    func doSomething(request: InstallmentSelection.Something.Request)
+    func getInstallments()
 }
 
 protocol InstallmentSelectionDataStore {
-    //var name: String { get set }
+    var installmentsResponse: InstallmentsResponse! { get set }
 }
 
 class InstallmentSelectionInteractor: InstallmentSelectionBusinessLogic, InstallmentSelectionDataStore {
     var presenter: InstallmentSelectionPresentationLogic?
     var worker: InstallmentSelectionWorker?
-    //var name: String = ""
 
-    // MARK: Do something
+    var installmentsResponse: InstallmentsResponse!
 
-    func doSomething(request: InstallmentSelection.Something.Request) {
-        worker = InstallmentSelectionWorker()
-        worker?.doSomeWork()
-
-        let response = InstallmentSelection.Something.Response()
-        presenter?.presentSomething(response: response)
+    func getInstallments() {
+        let response = InstallmentSelection.Installment.Response(installmentsResponse: installmentsResponse)
+        presenter?.presentView(response: response)
     }
 }

@@ -14,6 +14,10 @@ import UIKit
 
 protocol BankSelectionPresentationLogic {
     func presentView(response: BankSelection.BankIssuers.Response)
+    func presentInstallments()
+    func presentLoading()
+    func dismissLoading()
+    func presentError()
 }
 
 class BankSelectionPresenter: BankSelectionPresentationLogic {
@@ -29,5 +33,22 @@ class BankSelectionPresenter: BankSelectionPresentationLogic {
         let viewModel = BankSelection.BankIssuers.ViewModel(diplayedBankIssuersArray: bankIssuersArray)
 
         viewController?.displayView(viewModel: viewModel)
+    }
+
+    func presentInstallments() {
+        viewController?.displayInstallments()
+    }
+
+    func presentLoading() {
+        viewController?.dismissLoading()
+    }
+
+    func dismissLoading() {
+        viewController?.dismissLoading()
+    }
+
+    func presentError() {
+        let viewModel = BankSelection.Error.ViewModel(title: "", message: "")
+        viewController?.displayError(viewModel: viewModel)
     }
 }

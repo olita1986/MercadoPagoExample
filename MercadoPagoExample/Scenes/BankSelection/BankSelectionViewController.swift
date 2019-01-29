@@ -96,7 +96,7 @@ class BankSelectionViewController: UIViewController, BankSelectionDisplayLogic {
     }
 
     func displayInstallments() {
-
+        router?.routeToInstallments()
     }
 }
 
@@ -112,5 +112,10 @@ extension BankSelectionViewController: UITableViewDelegate, UITableViewDataSourc
         cell.setupCell(withOption: bankIssuer)
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let request = BankSelection.Installment.Request()
+        interactor?.getInstallments(request: request)
     }
 }

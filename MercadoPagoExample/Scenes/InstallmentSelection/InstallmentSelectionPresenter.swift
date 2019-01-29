@@ -13,16 +13,22 @@
 import UIKit
 
 protocol InstallmentSelectionPresentationLogic {
-    func presentSomething(response: InstallmentSelection.Something.Response)
+    func presentView(response: InstallmentSelection.Installment.Response)
 }
 
 class InstallmentSelectionPresenter: InstallmentSelectionPresentationLogic {
     weak var viewController: InstallmentSelectionDisplayLogic?
 
-    // MARK: Do something
+    func presentView(response: InstallmentSelection.Installment.Response) {
+        var displayedInstallmentArray = [InstallmentSelection.Installment.ViewModel.DisplayedInstallment]()
 
-    func presentSomething(response: InstallmentSelection.Something.Response) {
-        let viewModel = InstallmentSelection.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+        let payerCosts = response.installmentsResponse[0]
+
+        for installment in payerCosts.payerCosts {
+            let displayedInstallment = InstallmentSelection.Installment.ViewModel.DisplayedInstallment(recommendedMessage: installment.recommendedMessage, installments: String(installment.installments), installmentValue: "$\(installment.installmentAmount)", totalAmount: "$\(installment.totalAmount)")
+            displayedInstallmentArray.append(displayedInstallment)
+        }
+        let viewModel = InstallmentSelection.Installment.ViewModel(displayedInstallments: displayedInstallmentArray)
+        viewController?.displayView(viewModel: viewModel)
     }
 }

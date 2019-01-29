@@ -13,13 +13,20 @@
 import UIKit
 
 protocol InstallmentSelectionDisplayLogic: class {
-    func displaySomething(viewModel: InstallmentSelection.Something.ViewModel)
+    func displayView(viewModel: InstallmentSelection.Installment.ViewModel)
 }
 
 class InstallmentSelectionViewController: UIViewController, InstallmentSelectionDisplayLogic {
     var interactor: InstallmentSelectionBusinessLogic?
     var router: (NSObjectProtocol & InstallmentSelectionRoutingLogic & InstallmentSelectionDataPassing)?
 
+    @IBOutlet weak var installmentsTableView: UITableView!
+
+    var displayedInstallmentsArray = [InstallmentSelection.Installment.ViewModel.DisplayedInstallment]() {
+        didSet {
+            installmentsTableView.reloadData()
+        }
+    }
     // MARK: Object lifecycle
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -47,34 +54,41 @@ class InstallmentSelectionViewController: UIViewController, InstallmentSelection
         router.dataStore = interactor
     }
 
-    // MARK: Routing
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
-
     // MARK: View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        setupViews()
+        interactor?.getInstallments()
     }
 
-    // MARK: Do something
-
-    //@IBOutlet weak var nameTextField: UITextField!
-
-    func doSomething() {
-        let request = InstallmentSelection.Something.Request()
-        interactor?.doSomething(request: request)
+    private func setupViews() {
+        setupInstallmentsTableView()
     }
 
-    func displaySomething(viewModel: InstallmentSelection.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    private func setupInstallmentsTableView() {
+        installmentsTableView.delegate = self
+        installmentsTableView.dataSource = self
+
+        installmentsTableView.register(UINib(nibName: "InstallmentTableViewCell", bundle: nil), forCellReuseIdentifier: "installmentCell")
+    }
+
+    func displayView(viewModel: InstallmentSelection.Installment.ViewModel) {
+        self.displayedInstallmentsArray = viewModel.displayedInstallments
+    }
+}
+
+extension InstallmentSelectionViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return displayedInstallmentsArray.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let installment = displayedInstallmentsArray[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "installmentCell", for: indexPath) as? InstallmentTableViewCell else { return UITableViewCell()}
+
+        cell.setupCell(withInstallment: installment)
+
+        return cell
     }
 }
