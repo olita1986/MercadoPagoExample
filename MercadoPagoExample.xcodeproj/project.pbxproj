@@ -55,6 +55,9 @@
 		8E53D3F421FF479B00EACCE3 /* AlamoFireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3F321FF479B00EACCE3 /* AlamoFireClient.swift */; };
 		8E53D3F621FF4DE800EACCE3 /* UrlSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D3F521FF4DE800EACCE3 /* UrlSessionClient.swift */; };
 		8ECD0C482200FFB000687E0F /* AmountInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ECD0C472200FFB000687E0F /* AmountInputViewController.xib */; };
+		8ECD0C4B22010C8100687E0F /* SummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ECD0C4A22010C8100687E0F /* SummaryViewController.xib */; };
+		8ECD0C4F22010DB500687E0F /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C4D22010DB500687E0F /* SummaryTableViewCell.swift */; };
+		8ECD0C5022010DB500687E0F /* SummaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ECD0C4E22010DB500687E0F /* SummaryTableViewCell.xib */; };
 		8ED35D9E21FFBFDB0059F16B /* PaymentSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED35D9D21FFBFDB0059F16B /* PaymentSelectionViewController.xib */; };
 		8ED35DA621FFE9770059F16B /* StandardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED35DA421FFE9770059F16B /* StandardTableViewCell.swift */; };
 		8ED35DA721FFE9770059F16B /* StandardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED35DA521FFE9770059F16B /* StandardTableViewCell.xib */; };
@@ -135,6 +138,9 @@
 		8E53D3F321FF479B00EACCE3 /* AlamoFireClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireClient.swift; sourceTree = "<group>"; };
 		8E53D3F521FF4DE800EACCE3 /* UrlSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionClient.swift; sourceTree = "<group>"; };
 		8ECD0C472200FFB000687E0F /* AmountInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmountInputViewController.xib; sourceTree = "<group>"; };
+		8ECD0C4A22010C8100687E0F /* SummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryViewController.xib; sourceTree = "<group>"; };
+		8ECD0C4D22010DB500687E0F /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
+		8ECD0C4E22010DB500687E0F /* SummaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryTableViewCell.xib; sourceTree = "<group>"; };
 		8ED35D9D21FFBFDB0059F16B /* PaymentSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentSelectionViewController.xib; sourceTree = "<group>"; };
 		8ED35DA421FFE9770059F16B /* StandardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTableViewCell.swift; sourceTree = "<group>"; };
 		8ED35DA521FFE9770059F16B /* StandardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandardTableViewCell.xib; sourceTree = "<group>"; };
@@ -298,6 +304,7 @@
 		8E53D39221FE4B8B00EACCE3 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				8ECD0C4922010C3D00687E0F /* Views */,
 				8E53D3C721FE4E0900EACCE3 /* SummaryPresenter.swift */,
 				8E53D3C821FE4E0900EACCE3 /* SummaryWorker.swift */,
 				8E53D3C921FE4E0900EACCE3 /* SummaryRouter.swift */,
@@ -364,6 +371,24 @@
 				8ECD0C472200FFB000687E0F /* AmountInputViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8ECD0C4922010C3D00687E0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8ECD0C4C22010D9400687E0F /* Cells */,
+				8ECD0C4A22010C8100687E0F /* SummaryViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8ECD0C4C22010D9400687E0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8ECD0C4D22010DB500687E0F /* SummaryTableViewCell.swift */,
+				8ECD0C4E22010DB500687E0F /* SummaryTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8ED35D9F21FFDE260059F16B /* Views */ = {
@@ -515,6 +540,8 @@
 				8E53D3EF21FF417C00EACCE3 /* GET_bank_issuers_200.json in Resources */,
 				8ED35DAB21FFEFA30059F16B /* BankSelectionViewController.xib in Resources */,
 				8ECD0C482200FFB000687E0F /* AmountInputViewController.xib in Resources */,
+				8ECD0C5022010DB500687E0F /* SummaryTableViewCell.xib in Resources */,
+				8ECD0C4B22010C8100687E0F /* SummaryViewController.xib in Resources */,
 				8E53D37721FE468900EACCE3 /* LaunchScreen.storyboard in Resources */,
 				8ED35DB3220086580059F16B /* InstallmentTableViewCell.xib in Resources */,
 				8ED35D9E21FFBFDB0059F16B /* PaymentSelectionViewController.xib in Resources */,
@@ -568,6 +595,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MercadoPagoExample/Pods-MercadoPagoExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -575,6 +603,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,6 +643,7 @@
 				8E53D3AB21FE4DD300EACCE3 /* PaymentSelectionRouter.swift in Sources */,
 				8E53D3B521FE4DE300EACCE3 /* BankSelectionPresenter.swift in Sources */,
 				8E53D3C321FE4DFC00EACCE3 /* InstallmentSelectionRouter.swift in Sources */,
+				8ECD0C4F22010DB500687E0F /* SummaryTableViewCell.swift in Sources */,
 				8E53D3F121FF461700EACCE3 /* MPEApi.swift in Sources */,
 				8E53D3D121FE4E0900EACCE3 /* SummaryViewController.swift in Sources */,
 				8E53D3D521FEA2EA00EACCE3 /* PaymentMethodsResponse.swift in Sources */,

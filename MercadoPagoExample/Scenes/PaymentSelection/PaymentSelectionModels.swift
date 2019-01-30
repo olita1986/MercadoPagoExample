@@ -40,7 +40,7 @@ enum PaymentSelection {
 
     enum BankIssuers {
         struct Request {
-            var paymentMethodId: String
+            var index: Int
         }
     }
 

@@ -14,10 +14,14 @@ import UIKit
 
 protocol InstallmentSelectionBusinessLogic {
     func getInstallments()
+    func getToSummary(request: InstallmentSelection.Summary.Request)
 }
 
 protocol InstallmentSelectionDataStore {
     var installmentsResponse: InstallmentsResponse! { get set }
+    var amount: String! { get set }
+    var paymentMethod: PaymentMethodsElement! { get set }
+    var installment: PayerCost! { get set }
 }
 
 class InstallmentSelectionInteractor: InstallmentSelectionBusinessLogic, InstallmentSelectionDataStore {
@@ -25,9 +29,17 @@ class InstallmentSelectionInteractor: InstallmentSelectionBusinessLogic, Install
     var worker: InstallmentSelectionWorker?
 
     var installmentsResponse: InstallmentsResponse!
+    var amount: String!
+    var paymentMethod: PaymentMethodsElement!
+    var installment: PayerCost!
 
     func getInstallments() {
         let response = InstallmentSelection.Installment.Response(installmentsResponse: installmentsResponse)
         presenter?.presentView(response: response)
+    }
+
+    func getToSummary(request: InstallmentSelection.Summary.Request) {
+        installment = installmentsResponse[0].payerCosts[request.index]
+        presenter?.presentSummary()
     }
 }

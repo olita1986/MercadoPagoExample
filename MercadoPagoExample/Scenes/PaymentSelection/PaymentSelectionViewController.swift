@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 protocol PaymentSelectionDisplayLogic: class {
     func displayLoading()
@@ -25,6 +26,8 @@ class PaymentSelectionViewController: UIViewController, PaymentSelectionDisplayL
     var router: (NSObjectProtocol & PaymentSelectionRoutingLogic & PaymentSelectionDataPassing)?
 
     @IBOutlet weak var paymentMethodsTableView: UITableView!
+
+    let hud = JGProgressHUD(style: .dark)
 
 
     var displayedPaymentMethodsArray = [PaymentSelection.PaymentMethods.ViewModel.DisplayedPaymentMethods]() {
@@ -80,11 +83,12 @@ class PaymentSelectionViewController: UIViewController, PaymentSelectionDisplayL
     }
 
     func displayLoading() {
-
+        hud.textLabel.text = "Loading"
+        hud.show(in: view)
     }
 
     func dismissLoading() {
-
+        hud.dismiss()
     }
 
     func displayView(viewModel: PaymentSelection.PaymentMethods.ViewModel) {
@@ -96,7 +100,8 @@ class PaymentSelectionViewController: UIViewController, PaymentSelectionDisplayL
     }
 
     func displayError(viewModel: PaymentSelection.Error.ViewModel) {
-        let alert = UIAlertController(title: viewModel.message, message: viewModel.message, preferredStyle: .alert)
+        let alert = UIAlertController(title: viewModel.title, message: viewModel.message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 }
@@ -116,7 +121,7 @@ extension PaymentSelectionViewController: UITableViewDelegate, UITableViewDataSo
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let request = PaymentSelection.BankIssuers.Request(paymentMethodId: "")
+        let request = PaymentSelection.BankIssuers.Request(index: indexPath.row)
         interactor?.getBankIssuers(request: request)
     }
 }

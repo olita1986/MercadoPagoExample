@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol InstallmentSelectionRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToSummary()
 }
 
 protocol InstallmentSelectionDataPassing {
@@ -26,32 +26,29 @@ class InstallmentSelectionRouter: NSObject, InstallmentSelectionRoutingLogic, In
 
     // MARK: Routing
 
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
-    //{
-    //  if let segue = segue {
-    //    let destinationVC = segue.destination as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //  } else {
-    //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-    //  }
-    //}
+    func routeToSummary() {
+        let destinationVC = SummaryViewController()
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToSummary(source: dataStore!, destination: &destinationDS)
+        navigateToSummary(source: viewController!, destination: destinationVC)
+    }
 
     // MARK: Navigation
 
-    //func navigateToSomewhere(source: InstallmentSelectionViewController, destination: SomewhereViewController)
-    //{
-    //  source.show(destination, sender: nil)
-    //}
+    func navigateToSummary(source: InstallmentSelectionViewController, destination: SummaryViewController)
+    {
+      source.navigationController?.pushViewController(destination, animated: true)
+    }
 
     // MARK: Passing data
 
-    //func passDataToSomewhere(source: InstallmentSelectionDataStore, destination: inout SomewhereDataStore)
-    //{
-    //  destination.name = source.name
-    //}
+    func passDataToSummary(source: InstallmentSelectionDataStore, destination: inout SummaryDataStore)
+    {
+        destination.amount = source.amount
+        destination.installments = String(source.installment.installments)
+        destination.installmentValue = String(source.installment.installmentAmount)
+        destination.issuer = source.installmentsResponse[0].issuer.name
+        destination.paymentMethod = source.paymentMethod.name
+        destination.totalAmount = String(source.installment.totalAmount)
+    }
 }

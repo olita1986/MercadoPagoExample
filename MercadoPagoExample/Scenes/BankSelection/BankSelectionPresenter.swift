@@ -40,7 +40,7 @@ class BankSelectionPresenter: BankSelectionPresentationLogic {
     }
 
     func presentLoading() {
-        viewController?.dismissLoading()
+        viewController?.displayLoading()
     }
 
     func dismissLoading() {

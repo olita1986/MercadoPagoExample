@@ -20,6 +20,9 @@ protocol BankSelectionBusinessLogic {
 protocol BankSelectionDataStore {
     var bankIssuers: BanksResponse! { get set }
     var installmentsResponse: InstallmentsResponse! { get set }
+    var amount: String! { get set }
+    var paymentMethod: PaymentMethodsElement! { get set }
+    var issuer: BanksResponseElement! { get set }
 }
 
 class BankSelectionInteractor: BankSelectionBusinessLogic, BankSelectionDataStore {
@@ -28,6 +31,9 @@ class BankSelectionInteractor: BankSelectionBusinessLogic, BankSelectionDataStor
 
     var bankIssuers: BanksResponse!
     var installmentsResponse: InstallmentsResponse!
+    var amount: String!
+    var paymentMethod: PaymentMethodsElement!
+    var issuer: BanksResponseElement!
 
     let mpeApi: MPEApi
 
@@ -41,10 +47,16 @@ class BankSelectionInteractor: BankSelectionBusinessLogic, BankSelectionDataStor
     }
 
     func getInstallments(request: BankSelection.Installment.Request) {
-        mpeApi.getInstallments(withPaymentMethodId: "", amount: "", issuerId: "") { [weak self](installments) in
+        presenter?.presentLoading()
+        let issuer = bankIssuers[request.index]
+        self.issuer = issuer
+        mpeApi.getInstallments(withPaymentMethodId: paymentMethod.id, amount: amount, issuerId: issuer.id) { [weak self](installments) in
+            self?.presenter?.dismissLoading()
             if let installmentsResponse = installments {
                 self?.installmentsResponse = installmentsResponse
                 self?.presenter?.presentInstallments()
+            } else {
+                self?.presenter?.presentError()
             }
         }
     }

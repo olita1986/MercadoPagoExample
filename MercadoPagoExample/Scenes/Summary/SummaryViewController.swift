@@ -13,13 +13,20 @@
 import UIKit
 
 protocol SummaryDisplayLogic: class {
-    func displaySomething(viewModel: Summary.Something.ViewModel)
+    func displaySummary(viewModel: Summary.Summary.ViewModel)
 }
 
 class SummaryViewController: UIViewController, SummaryDisplayLogic {
     var interactor: SummaryBusinessLogic?
     var router: (NSObjectProtocol & SummaryRoutingLogic & SummaryDataPassing)?
 
+    @IBOutlet weak var summaryTableView: UITableView!
+
+    var displayedSummary = Summary.Summary.ViewModel.DisplayedSummary(installments: "", installmentValue: "", amount: "", totalAmount: "", paymentMethod: "", issuer: "") {
+        didSet {
+            summaryTableView.reloadData()
+        }
+    }
     // MARK: Object lifecycle
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -47,34 +54,63 @@ class SummaryViewController: UIViewController, SummaryDisplayLogic {
         router.dataStore = interactor
     }
 
-    // MARK: Routing
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
-
     // MARK: View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        setupViews()
+        interactor?.getSummary()
     }
 
-    // MARK: Do something
-
-    //@IBOutlet weak var nameTextField: UITextField!
-
-    func doSomething() {
-        let request = Summary.Something.Request()
-        interactor?.doSomething(request: request)
+    func setupViews() {
+        title = "Summary"
+        setupSummaryTableView()
     }
 
-    func displaySomething(viewModel: Summary.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    func setupSummaryTableView() {
+        summaryTableView.delegate = self
+        summaryTableView.dataSource = self
+        summaryTableView.tableFooterView = UIView()
+
+        summaryTableView.register(UINib(nibName: "SummaryTableViewCell", bundle: nil), forCellReuseIdentifier: "summaryCell")
     }
+
+    func displaySummary(viewModel: Summary.Summary.ViewModel) {
+        displayedSummary = viewModel.displayedSummary
+    }
+    
+    @IBAction func finishButtonPressed(_ sender: Any) {
+        router?.routeToStart()
+    }
+}
+
+extension SummaryViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "summaryCell", for: indexPath) as? SummaryTableViewCell else { return UITableViewCell() }
+
+        switch indexPath.row {
+        case 0:
+            cell.setupCell(withTitle: "Requested Amount", value: displayedSummary.amount)
+        case 1:
+            cell.setupCell(withTitle: "Payment Method", value: displayedSummary.paymentMethod)
+        case 2:
+            cell.setupCell(withTitle: "Issuer", value: displayedSummary.issuer)
+        case 3:
+            cell.setupCell(withTitle: "Installments", value: displayedSummary.installments)
+        case 4:
+            cell.setupCell(withTitle: "Installment Value", value: displayedSummary.installmentValue)
+        case 5:
+            cell.setupCell(withTitle: "Total to Pay", value: displayedSummary.totalAmount)
+        default:
+            break
+        }
+
+        return cell
+    }
+
+
 }

@@ -38,13 +38,15 @@ class BankSelectionRouter: NSObject, BankSelectionRoutingLogic, BankSelectionDat
 
     func navigateToInstallment(source: BankSelectionViewController, destination: InstallmentSelectionViewController)
     {
-      source.navigationController?.pushViewController(destination, animated: true)
+        source.navigationController?.pushViewController(destination, animated: true)
     }
 
     // MARK: Passing data
 
     func passDataToInstallment(source: BankSelectionDataStore, destination: inout InstallmentSelectionDataStore)
     {
-      destination.installmentsResponse = source.installmentsResponse
+        destination.installmentsResponse = source.installmentsResponse
+        destination.paymentMethod = source.paymentMethod
+        destination.amount = source.amount
     }
 }

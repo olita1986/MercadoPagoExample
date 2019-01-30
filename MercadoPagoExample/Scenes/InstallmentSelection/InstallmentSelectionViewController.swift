@@ -14,6 +14,7 @@ import UIKit
 
 protocol InstallmentSelectionDisplayLogic: class {
     func displayView(viewModel: InstallmentSelection.Installment.ViewModel)
+    func displaySummary()
 }
 
 class InstallmentSelectionViewController: UIViewController, InstallmentSelectionDisplayLogic {
@@ -77,6 +78,10 @@ class InstallmentSelectionViewController: UIViewController, InstallmentSelection
     func displayView(viewModel: InstallmentSelection.Installment.ViewModel) {
         self.displayedInstallmentsArray = viewModel.displayedInstallments
     }
+
+    func displaySummary() {
+        router?.routeToSummary()
+    }
 }
 
 extension InstallmentSelectionViewController: UITableViewDelegate, UITableViewDataSource {
@@ -91,5 +96,10 @@ extension InstallmentSelectionViewController: UITableViewDelegate, UITableViewDa
         cell.setupCell(withInstallment: installment)
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let request = InstallmentSelection.Summary.Request(index: indexPath.row)
+        interactor?.getToSummary(request: request)
     }
 }

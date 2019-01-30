@@ -8,6 +8,7 @@ target 'MercadoPagoExample' do
   # Pods for MercadoPagoExample
   pod 'Alamofire', '~> 4.7.1'
   pod 'OHHTTPStubs/Swift'
+  pod 'JGProgressHUD'
 
   target 'MercadoPagoExampleTests' do
     inherit! :search_paths

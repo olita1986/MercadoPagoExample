@@ -13,25 +13,32 @@
 import UIKit
 
 protocol SummaryBusinessLogic {
-    func doSomething(request: Summary.Something.Request)
+    func getSummary()
 }
 
 protocol SummaryDataStore {
-    //var name: String { get set }
+    var amount: String! { get set }
+    var totalAmount: String! { get set }
+    var paymentMethod: String! { get set }
+    var issuer: String! { get set }
+    var installments: String! { get set }
+    var installmentValue: String! { get set }
 }
 
 class SummaryInteractor: SummaryBusinessLogic, SummaryDataStore {
     var presenter: SummaryPresentationLogic?
     var worker: SummaryWorker?
-    //var name: String = ""
 
-    // MARK: Do something
+    var installments: String!
+    var installmentValue: String!
+    var amount: String!
+    var totalAmount: String!
+    var paymentMethod: String!
+    var issuer: String!
 
-    func doSomething(request: Summary.Something.Request) {
-        worker = SummaryWorker()
-        worker?.doSomeWork()
 
-        let response = Summary.Something.Response()
-        presenter?.presentSomething(response: response)
+    func getSummary() {
+        let response = Summary.Summary.Response(installments: installments, installmentValue: installmentValue, amount: amount, totalAmount: totalAmount, paymentMethod: paymentMethod, issuer: issuer)
+        presenter?.presentSummary(response: response)
     }
 }

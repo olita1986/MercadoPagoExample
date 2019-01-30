@@ -39,7 +39,7 @@ enum BankSelection {
 
     enum Installment {
         struct Request {
-            
+            var index: Int
         }
     }
 }

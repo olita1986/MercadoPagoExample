@@ -15,12 +15,28 @@ import UIKit
 enum Summary {
     // MARK: Use cases
 
-    enum Something {
+    enum Summary {
         struct Request {
         }
         struct Response {
+            var installments: String
+            var installmentValue: String
+            var amount: String
+            var totalAmount: String
+            var paymentMethod: String
+            var issuer: String
         }
         struct ViewModel {
+            struct DisplayedSummary {
+                var installments: String
+                var installmentValue: String
+                var amount: String
+                var totalAmount: String
+                var paymentMethod: String
+                var issuer: String
+            }
+
+            var displayedSummary: DisplayedSummary
         }
     }
 }

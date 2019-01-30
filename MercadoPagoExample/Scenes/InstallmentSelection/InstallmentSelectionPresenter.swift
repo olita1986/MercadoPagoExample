@@ -14,6 +14,7 @@ import UIKit
 
 protocol InstallmentSelectionPresentationLogic {
     func presentView(response: InstallmentSelection.Installment.Response)
+    func presentSummary()
 }
 
 class InstallmentSelectionPresenter: InstallmentSelectionPresentationLogic {
@@ -30,5 +31,9 @@ class InstallmentSelectionPresenter: InstallmentSelectionPresentationLogic {
         }
         let viewModel = InstallmentSelection.Installment.ViewModel(displayedInstallments: displayedInstallmentArray)
         viewController?.displayView(viewModel: viewModel)
+    }
+
+    func presentSummary() {
+        viewController?.displaySummary()
     }
 }

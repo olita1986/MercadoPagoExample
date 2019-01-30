@@ -21,6 +21,7 @@ protocol PaymentSelectionDataStore {
     var paymentMethods: PaymentMethodsResponse! { get set }
     var bankIssuers: BanksResponse! { get set }
     var amount: String! { get set }
+    var paymentMethod: PaymentMethodsElement! { get set }
 }
 
 class PaymentSelectionInteractor: PaymentSelectionBusinessLogic, PaymentSelectionDataStore {
@@ -30,6 +31,7 @@ class PaymentSelectionInteractor: PaymentSelectionBusinessLogic, PaymentSelectio
     var paymentMethods: PaymentMethodsResponse!
     var bankIssuers: BanksResponse!
     var amount: String!
+    var paymentMethod: PaymentMethodsElement!
 
     let mpeApi: MPEApi
 
@@ -42,7 +44,6 @@ class PaymentSelectionInteractor: PaymentSelectionBusinessLogic, PaymentSelectio
         mpeApi.getPaymentMethods { [weak self](paymentMethodsResponse) in
             self?.presenter?.dismissLoading()
             self?.paymentMethods = paymentMethodsResponse != nil ? paymentMethodsResponse! : []
-           // print(paymentMethodsResponse)
             let response = PaymentSelection.PaymentMethods.Response(paymentMethods: paymentMethodsResponse!)
             self?.presenter?.presentView(response: response)
         }
@@ -50,13 +51,15 @@ class PaymentSelectionInteractor: PaymentSelectionBusinessLogic, PaymentSelectio
 
     func getBankIssuers(request: PaymentSelection.BankIssuers.Request) {
         presenter?.presentLoading()
-        mpeApi.getIssuers(withPaymentMethodId: request.paymentMethodId) { [weak self](bankIssuersResponse) in
+        let paymentMethod = paymentMethods[request.index]
+        self.paymentMethod = paymentMethod
+        mpeApi.getIssuers(withPaymentMethodId: paymentMethod.id) { [weak self](bankIssuersResponse) in
             self?.presenter?.dismissLoading()
-            if let bankIssuers = bankIssuersResponse {
+            if let bankIssuers = bankIssuersResponse, bankIssuers.count > 0 {
                 self?.bankIssuers = bankIssuers
                 self?.presenter?.presentBankIssuers()
             } else {
-                
+                self?.presenter?.presentError()
             }
         }
     }

@@ -40,4 +40,10 @@ enum InstallmentSelection {
             var displayedInstallments: [DisplayedInstallment]
         }
     }
+
+    enum Summary {
+        struct Request {
+            var index: Int
+        }
+    }
 }

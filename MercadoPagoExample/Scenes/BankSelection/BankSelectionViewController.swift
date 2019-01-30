@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 protocol BankSelectionDisplayLogic: class {
     func displayView(viewModel: BankSelection.BankIssuers.ViewModel)
@@ -25,6 +26,8 @@ class BankSelectionViewController: UIViewController, BankSelectionDisplayLogic {
     var router: (NSObjectProtocol & BankSelectionRoutingLogic & BankSelectionDataPassing)?
 
     @IBOutlet weak var bankIssuersTableView: UITableView!
+
+    let hud = JGProgressHUD(style: .dark)
     
     var displayedBankIssuersArray = [BankSelection.BankIssuers.ViewModel.DisplayedBankIssuers]() {
         didSet {
@@ -84,15 +87,17 @@ class BankSelectionViewController: UIViewController, BankSelectionDisplayLogic {
     }
 
     func displayLoading() {
-
+        hud.textLabel.text = "Loading"
+        hud.show(in: view)
     }
 
     func dismissLoading() {
-
+        hud.dismiss()
     }
 
     func displayError(viewModel: BankSelection.Error.ViewModel) {
-        let alert = UIAlertController(title: viewModel.message, message: viewModel.message, preferredStyle: .alert)
+        let alert = UIAlertController(title: viewModel.title, message: viewModel.message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 
@@ -116,7 +121,7 @@ extension BankSelectionViewController: UITableViewDelegate, UITableViewDataSourc
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let request = BankSelection.Installment.Request()
+        let request = BankSelection.Installment.Request(index: indexPath.row)
         interactor?.getInstallments(request: request)
     }
 }

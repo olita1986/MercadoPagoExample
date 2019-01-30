@@ -13,16 +13,15 @@
 import UIKit
 
 protocol SummaryPresentationLogic {
-    func presentSomething(response: Summary.Something.Response)
+    func presentSummary(response: Summary.Summary.Response)
 }
 
 class SummaryPresenter: SummaryPresentationLogic {
     weak var viewController: SummaryDisplayLogic?
 
-    // MARK: Do something
-
-    func presentSomething(response: Summary.Something.Response) {
-        let viewModel = Summary.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentSummary(response: Summary.Summary.Response) {
+        let displayedSummary = Summary.Summary.ViewModel.DisplayedSummary(installments: response.installments, installmentValue: "$ \(response.installmentValue)", amount: "$ \(response.amount)", totalAmount: "$ \(response.totalAmount)", paymentMethod: response.paymentMethod, issuer: response.issuer)
+        let viewModel = Summary.Summary.ViewModel(displayedSummary: displayedSummary)
+        viewController?.displaySummary(viewModel: viewModel)
     }
 }
