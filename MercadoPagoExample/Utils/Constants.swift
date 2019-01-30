@@ -2,8 +2,8 @@
 //  Constants.swift
 //  MercadoPagoExample
 //
-//  Created by Nisum on 1/27/19.
-//  Copyright © 2019 Nisum. All rights reserved.
+//  Created by Orlando Arzola on 1/27/19.
+//  Copyright © 2019 Orlando Arzola. All rights reserved.
 //
 
 import Foundation

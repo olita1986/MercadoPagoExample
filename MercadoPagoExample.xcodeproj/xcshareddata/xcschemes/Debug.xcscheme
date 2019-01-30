@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8E53D36821FE468500EACCE3"
-               BuildableName = "MPE-Release.app"
+               BuildableName = "MPERelease.app"
                BlueprintName = "MercadoPagoExample"
                ReferencedContainer = "container:MercadoPagoExample.xcodeproj">
             </BuildableReference>
@@ -26,7 +26,18 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8E53D36821FE468500EACCE3"
+            BuildableName = "MPERelease.app"
+            BlueprintName = "MercadoPagoExample"
+            ReferencedContainer = "container:MercadoPagoExample.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -43,7 +54,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8E53D36821FE468500EACCE3"
-            BuildableName = "MPE-Release.app"
+            BuildableName = "MPERelease.app"
             BlueprintName = "MercadoPagoExample"
             ReferencedContainer = "container:MercadoPagoExample.xcodeproj">
          </BuildableReference>
@@ -66,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8E53D36821FE468500EACCE3"
-            BuildableName = "MPE-Release.app"
+            BuildableName = "MPERelease.app"
             BlueprintName = "MercadoPagoExample"
             ReferencedContainer = "container:MercadoPagoExample.xcodeproj">
          </BuildableReference>
@@ -85,7 +96,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8E53D36821FE468500EACCE3"
-            BuildableName = "MPE-Release.app"
+            BuildableName = "MPERelease.app"
             BlueprintName = "MercadoPagoExample"
             ReferencedContainer = "container:MercadoPagoExample.xcodeproj">
          </BuildableReference>

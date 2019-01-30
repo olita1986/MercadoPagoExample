@@ -22,9 +22,9 @@
 	<true/>
 	<key>Stubs</key>
 	<dict>
-		<key>mpe-debug</key>
+		<key>mpedebug</key>
 		<true/>
-		<key>mpe-release</key>
+		<key>mperelease</key>
 		<false/>
 	</dict>
 	<key>UILaunchStoryboardName</key>

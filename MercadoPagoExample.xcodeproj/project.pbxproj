@@ -58,6 +58,18 @@
 		8ECD0C4B22010C8100687E0F /* SummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ECD0C4A22010C8100687E0F /* SummaryViewController.xib */; };
 		8ECD0C4F22010DB500687E0F /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C4D22010DB500687E0F /* SummaryTableViewCell.swift */; };
 		8ECD0C5022010DB500687E0F /* SummaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ECD0C4E22010DB500687E0F /* SummaryTableViewCell.xib */; };
+		8ECD0C56220148AB00687E0F /* PaymentSelectionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C52220148AB00687E0F /* PaymentSelectionViewControllerTests.swift */; };
+		8ECD0C57220148AB00687E0F /* PaymentSelectionInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C53220148AB00687E0F /* PaymentSelectionInteractorTests.swift */; };
+		8ECD0C58220148AB00687E0F /* PaymentSelectionWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C54220148AB00687E0F /* PaymentSelectionWorkerTests.swift */; };
+		8ECD0C59220148AB00687E0F /* PaymentSelectionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C55220148AB00687E0F /* PaymentSelectionPresenterTests.swift */; };
+		8ECD0C5D2201490200687E0F /* PaymentSelectionPresentationLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C5C2201490200687E0F /* PaymentSelectionPresentationLogicSpy.swift */; };
+		8ECD0C5F2201498000687E0F /* PaymentSelectionDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C5E2201498000687E0F /* PaymentSelectionDisplayLogicSpy.swift */; };
+		8ECD0C61220149AD00687E0F /* PaymentSelectionBusinessLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C60220149AD00687E0F /* PaymentSelectionBusinessLogicSpy.swift */; };
+		8ECD0C63220152A900687E0F /* MPEApiSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C62220152A900687E0F /* MPEApiSpy.swift */; };
+		8ECD0C662201D03C00687E0F /* PaymentMethodsResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C652201D03C00687E0F /* PaymentMethodsResponseFactory.swift */; };
+		8ECD0C682201D77700687E0F /* BanksResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C672201D77700687E0F /* BanksResponseFactory.swift */; };
+		8ECD0C6B2201DF7600687E0F /* InstallmentsResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C6A2201DF7600687E0F /* InstallmentsResponseFactory.swift */; };
+		8ECD0C6D2201E9B200687E0F /* PaymentSelectionRoutingLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD0C6C2201E9B200687E0F /* PaymentSelectionRoutingLogicSpy.swift */; };
 		8ED35D9E21FFBFDB0059F16B /* PaymentSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED35D9D21FFBFDB0059F16B /* PaymentSelectionViewController.xib */; };
 		8ED35DA621FFE9770059F16B /* StandardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED35DA421FFE9770059F16B /* StandardTableViewCell.swift */; };
 		8ED35DA721FFE9770059F16B /* StandardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED35DA521FFE9770059F16B /* StandardTableViewCell.xib */; };
@@ -85,7 +97,7 @@
 		11A207B25748AB439428D23C /* Pods_MercadoPagoExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoPagoExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37278CF8E99064A26CCA9BC4 /* Pods-MercadoPagoExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPagoExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPagoExample/Pods-MercadoPagoExample.debug.xcconfig"; sourceTree = "<group>"; };
 		67A429D8CDE1D9223263490D /* Pods-MercadoPagoExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPagoExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPagoExampleTests/Pods-MercadoPagoExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8E53D36921FE468500EACCE3 /* MPE-Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MPE-Debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E53D36921FE468500EACCE3 /* MPEDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPEDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E53D36C21FE468500EACCE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E53D37321FE468900EACCE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E53D37621FE468900EACCE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,8 +139,6 @@
 		8E53D3D421FEA2EA00EACCE3 /* PaymentMethodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsResponse.swift; sourceTree = "<group>"; };
 		8E53D3D621FEA56700EACCE3 /* BanksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksResponse.swift; sourceTree = "<group>"; };
 		8E53D3D921FEA7D900EACCE3 /* InstallmentsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsResponse.swift; sourceTree = "<group>"; };
-		8E53D3DC21FEAC8100EACCE3 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		8E53D3DD21FEAC8E00EACCE3 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		8E53D3E021FEB42700EACCE3 /* Stubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
 		8E53D3E721FF3A3200EACCE3 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		8E53D3EA21FF417C00EACCE3 /* GET_installments_200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GET_installments_200.json; sourceTree = "<group>"; };
@@ -141,6 +151,18 @@
 		8ECD0C4A22010C8100687E0F /* SummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryViewController.xib; sourceTree = "<group>"; };
 		8ECD0C4D22010DB500687E0F /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		8ECD0C4E22010DB500687E0F /* SummaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryTableViewCell.xib; sourceTree = "<group>"; };
+		8ECD0C52220148AB00687E0F /* PaymentSelectionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionViewControllerTests.swift; sourceTree = "<group>"; };
+		8ECD0C53220148AB00687E0F /* PaymentSelectionInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionInteractorTests.swift; sourceTree = "<group>"; };
+		8ECD0C54220148AB00687E0F /* PaymentSelectionWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionWorkerTests.swift; sourceTree = "<group>"; };
+		8ECD0C55220148AB00687E0F /* PaymentSelectionPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionPresenterTests.swift; sourceTree = "<group>"; };
+		8ECD0C5C2201490200687E0F /* PaymentSelectionPresentationLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionPresentationLogicSpy.swift; sourceTree = "<group>"; };
+		8ECD0C5E2201498000687E0F /* PaymentSelectionDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionDisplayLogicSpy.swift; sourceTree = "<group>"; };
+		8ECD0C60220149AD00687E0F /* PaymentSelectionBusinessLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionBusinessLogicSpy.swift; sourceTree = "<group>"; };
+		8ECD0C62220152A900687E0F /* MPEApiSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPEApiSpy.swift; sourceTree = "<group>"; };
+		8ECD0C652201D03C00687E0F /* PaymentMethodsResponseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsResponseFactory.swift; sourceTree = "<group>"; };
+		8ECD0C672201D77700687E0F /* BanksResponseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksResponseFactory.swift; sourceTree = "<group>"; };
+		8ECD0C6A2201DF7600687E0F /* InstallmentsResponseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsResponseFactory.swift; sourceTree = "<group>"; };
+		8ECD0C6C2201E9B200687E0F /* PaymentSelectionRoutingLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectionRoutingLogicSpy.swift; sourceTree = "<group>"; };
 		8ED35D9D21FFBFDB0059F16B /* PaymentSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentSelectionViewController.xib; sourceTree = "<group>"; };
 		8ED35DA421FFE9770059F16B /* StandardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTableViewCell.swift; sourceTree = "<group>"; };
 		8ED35DA521FFE9770059F16B /* StandardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandardTableViewCell.xib; sourceTree = "<group>"; };
@@ -193,7 +215,7 @@
 		8E53D36A21FE468500EACCE3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E53D36921FE468500EACCE3 /* MPE-Debug.app */,
+				8E53D36921FE468500EACCE3 /* MPEDebug.app */,
 				8E53D37D21FE468A00EACCE3 /* MercadoPagoExampleTests.xctest */,
 			);
 			name = Products;
@@ -206,7 +228,6 @@
 				8E53D37321FE468900EACCE3 /* Assets.xcassets */,
 				8E53D37521FE468900EACCE3 /* LaunchScreen.storyboard */,
 				8E53D37821FE468900EACCE3 /* Info.plist */,
-				8E53D3DB21FEAC5800EACCE3 /* Configuration */,
 				8E53D3D321FEA29F00EACCE3 /* Models */,
 				8E53D39321FE4C3500EACCE3 /* Utils */,
 				8E53D38D21FE4ACD00EACCE3 /* Scenes */,
@@ -218,6 +239,8 @@
 		8E53D38021FE468A00EACCE3 /* MercadoPagoExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				8ECD0C642201CED700687E0F /* Factories */,
+				8ECD0C512201488B00687E0F /* Scenes */,
 				8E53D38121FE468A00EACCE3 /* MercadoPagoExampleTests.swift */,
 				8E53D38321FE468A00EACCE3 /* Info.plist */,
 			);
@@ -337,15 +360,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		8E53D3DB21FEAC5800EACCE3 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				8E53D3DC21FEAC8100EACCE3 /* Debug.xcconfig */,
-				8E53D3DD21FEAC8E00EACCE3 /* Release.xcconfig */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
 		8E53D3E921FF407C00EACCE3 /* TestData */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +403,56 @@
 				8ECD0C4E22010DB500687E0F /* SummaryTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		8ECD0C512201488B00687E0F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8ECD0C692201DEF900687E0F /* Global Spies */,
+				8ECD0C5A220148BB00687E0F /* PaymentSelection */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8ECD0C5A220148BB00687E0F /* PaymentSelection */ = {
+			isa = PBXGroup;
+			children = (
+				8ECD0C5B220148D300687E0F /* Spies */,
+				8ECD0C52220148AB00687E0F /* PaymentSelectionViewControllerTests.swift */,
+				8ECD0C53220148AB00687E0F /* PaymentSelectionInteractorTests.swift */,
+				8ECD0C54220148AB00687E0F /* PaymentSelectionWorkerTests.swift */,
+				8ECD0C55220148AB00687E0F /* PaymentSelectionPresenterTests.swift */,
+			);
+			path = PaymentSelection;
+			sourceTree = "<group>";
+		};
+		8ECD0C5B220148D300687E0F /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				8ECD0C5C2201490200687E0F /* PaymentSelectionPresentationLogicSpy.swift */,
+				8ECD0C5E2201498000687E0F /* PaymentSelectionDisplayLogicSpy.swift */,
+				8ECD0C60220149AD00687E0F /* PaymentSelectionBusinessLogicSpy.swift */,
+				8ECD0C6C2201E9B200687E0F /* PaymentSelectionRoutingLogicSpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		8ECD0C642201CED700687E0F /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				8ECD0C652201D03C00687E0F /* PaymentMethodsResponseFactory.swift */,
+				8ECD0C672201D77700687E0F /* BanksResponseFactory.swift */,
+				8ECD0C6A2201DF7600687E0F /* InstallmentsResponseFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		8ECD0C692201DEF900687E0F /* Global Spies */ = {
+			isa = PBXGroup;
+			children = (
+				8ECD0C62220152A900687E0F /* MPEApiSpy.swift */,
+			);
+			path = "Global Spies";
 			sourceTree = "<group>";
 		};
 		8ED35D9F21FFDE260059F16B /* Views */ = {
@@ -472,7 +536,7 @@
 			);
 			name = MercadoPagoExample;
 			productName = MercadoPagoExample;
-			productReference = 8E53D36921FE468500EACCE3 /* MPE-Debug.app */;
+			productReference = 8E53D36921FE468500EACCE3 /* MPEDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8E53D37C21FE468A00EACCE3 /* MercadoPagoExampleTests */ = {
@@ -690,7 +754,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ECD0C682201D77700687E0F /* BanksResponseFactory.swift in Sources */,
+				8ECD0C5F2201498000687E0F /* PaymentSelectionDisplayLogicSpy.swift in Sources */,
+				8ECD0C6D2201E9B200687E0F /* PaymentSelectionRoutingLogicSpy.swift in Sources */,
+				8ECD0C63220152A900687E0F /* MPEApiSpy.swift in Sources */,
+				8ECD0C59220148AB00687E0F /* PaymentSelectionPresenterTests.swift in Sources */,
+				8ECD0C5D2201490200687E0F /* PaymentSelectionPresentationLogicSpy.swift in Sources */,
+				8ECD0C61220149AD00687E0F /* PaymentSelectionBusinessLogicSpy.swift in Sources */,
+				8ECD0C56220148AB00687E0F /* PaymentSelectionViewControllerTests.swift in Sources */,
 				8E53D38221FE468A00EACCE3 /* MercadoPagoExampleTests.swift in Sources */,
+				8ECD0C57220148AB00687E0F /* PaymentSelectionInteractorTests.swift in Sources */,
+				8ECD0C58220148AB00687E0F /* PaymentSelectionWorkerTests.swift in Sources */,
+				8ECD0C662201D03C00687E0F /* PaymentMethodsResponseFactory.swift in Sources */,
+				8ECD0C6B2201DF7600687E0F /* InstallmentsResponseFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,7 +921,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OrlandoArzola.MercadoPagoExample.debug;
-				PRODUCT_NAME = "MPE-Debug";
+				PRODUCT_NAME = MPEDebug;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -864,7 +940,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OrlandoArzola.MercadoPagoExample.qa;
-				PRODUCT_NAME = "MPE-Release";
+				PRODUCT_NAME = MPERelease;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -888,7 +964,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoPagoExample.app/MercadoPagoExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MPEDebug.app/MPEDebug";
 			};
 			name = Debug;
 		};
@@ -910,7 +986,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoPagoExample.app/MercadoPagoExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MPEDebug.app/MPEDebug";
 			};
 			name = Release;
 		};

@@ -2,12 +2,12 @@
 //  MercadoPagoExampleTests.swift
 //  MercadoPagoExampleTests
 //
-//  Created by Nisum on 1/27/19.
-//  Copyright © 2019 Nisum. All rights reserved.
+//  Created by Orlando Arzola on 1/27/19.
+//  Copyright © 2019 Orlando Arzola. All rights reserved.
 //
 
 import XCTest
-@testable import MercadoPagoExample
+@testable import MPEDebug
 
 class MercadoPagoExampleTests: XCTestCase {
 
