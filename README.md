@@ -1,8 +1,8 @@
-Payment Project 
+# Payment Project 
 
-- Este proyecto utiiza las apis de mercado para crear un flow de pagos de cuotas
+## Este proyecto utiiza las apis de mercado para crear un flow de pagos de cuotas**
 
-- Caracteristicas:
+**Caracteristicas:**
 
  * Arquitecture utilizada: Clean Swift (VIP cycle)
  * POP para abstraer clases y servicios
