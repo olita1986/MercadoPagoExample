@@ -1,6 +1,6 @@
 # Payment Project 
 
-## Este proyecto utiiza las apis de mercado para crear un flow de pagos de cuotas**
+## Este proyecto utiiza las apis de `Mercado Pago` para crear un flow de pagos de cuotas
 
 **Caracteristicas:**
 
