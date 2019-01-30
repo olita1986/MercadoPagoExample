@@ -7,7 +7,7 @@
  * Arquitecture utilizada: Clean Swift (VIP cycle)
  * POP para abstraer clases y servicios
  * Se creo ambientes de desarrollo y release (Stubs)
- * Se utilizo factory patter para generar modelos de negocio en los tests
+ * Se utilizo factory pattern para generar modelos de negocio en los tests
  * Se agrego ejemplo de Unit Tests para la escena de `PaymentSelection`
  * Inyeccion de dependencia a traves del router y datastore store de cada escena
  * Codable protocol para parsear objetos
