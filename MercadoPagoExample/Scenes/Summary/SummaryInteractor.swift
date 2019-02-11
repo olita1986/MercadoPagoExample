@@ -17,28 +17,18 @@ protocol SummaryBusinessLogic {
 }
 
 protocol SummaryDataStore {
-    var amount: String! { get set }
-    var totalAmount: String! { get set }
-    var paymentMethod: String! { get set }
-    var issuer: String! { get set }
-    var installments: String! { get set }
-    var installmentValue: String! { get set }
+    var paymentFlowBuilder: PaymentFlowDataBuilder! { get set }
 }
 
 class SummaryInteractor: SummaryBusinessLogic, SummaryDataStore {
     var presenter: SummaryPresentationLogic?
     var worker: SummaryWorker?
 
-    var installments: String!
-    var installmentValue: String!
-    var amount: String!
-    var totalAmount: String!
-    var paymentMethod: String!
-    var issuer: String!
-
+    var paymentFlowBuilder: PaymentFlowDataBuilder!
 
     func getSummary() {
-        let response = Summary.Summary.Response(installments: installments, installmentValue: installmentValue, amount: amount, totalAmount: totalAmount, paymentMethod: paymentMethod, issuer: issuer)
+        let paymentData = paymentFlowBuilder.build()
+        let response = Summary.Summary.Response(installments: String(paymentData.selectedInstallment.installments), installmentValue: String(paymentData.selectedInstallment.installmentAmount), amount: paymentData.amount, totalAmount: String(paymentData.selectedInstallment.totalAmount), paymentMethod: paymentData.selectedPaymentMethod.name, issuer: paymentData.selectedIssuer.name)
         presenter?.presentSummary(response: response)
     }
 }

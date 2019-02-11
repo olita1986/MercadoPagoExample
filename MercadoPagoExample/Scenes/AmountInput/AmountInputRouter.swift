@@ -44,6 +44,6 @@ class AmountInputRouter: NSObject, AmountInputRoutingLogic, AmountInputDataPassi
 
     func passDataToPaymentSelection(source: AmountInputDataStore, destination: inout PaymentSelectionDataStore)
     {
-      destination.amount = source.amount
+        destination.paymentFlowBuilder = source.paymentFlowBuilder
     }
 }

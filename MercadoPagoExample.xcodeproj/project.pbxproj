@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E6C334346B9F0CD553E868C /* Pods_MercadoPagoExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F56B3937DBB54FFA46609ED /* Pods_MercadoPagoExampleTests.framework */; };
+		8E370C802211A8E00004543B /* PaymentFlowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E370C7F2211A8E00004543B /* PaymentFlowData.swift */; };
 		8E53D36D21FE468500EACCE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E53D36C21FE468500EACCE3 /* AppDelegate.swift */; };
 		8E53D37421FE468900EACCE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E53D37321FE468900EACCE3 /* Assets.xcassets */; };
 		8E53D37721FE468900EACCE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E53D37521FE468900EACCE3 /* LaunchScreen.storyboard */; };
@@ -97,6 +98,7 @@
 		11A207B25748AB439428D23C /* Pods_MercadoPagoExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoPagoExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37278CF8E99064A26CCA9BC4 /* Pods-MercadoPagoExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPagoExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPagoExample/Pods-MercadoPagoExample.debug.xcconfig"; sourceTree = "<group>"; };
 		67A429D8CDE1D9223263490D /* Pods-MercadoPagoExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPagoExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPagoExampleTests/Pods-MercadoPagoExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E370C7F2211A8E00004543B /* PaymentFlowData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowData.swift; sourceTree = "<group>"; };
 		8E53D36921FE468500EACCE3 /* MPEDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPEDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E53D36C21FE468500EACCE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E53D37321FE468900EACCE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				8E53D37521FE468900EACCE3 /* LaunchScreen.storyboard */,
 				8E53D37821FE468900EACCE3 /* Info.plist */,
 				8E53D3D321FEA29F00EACCE3 /* Models */,
+				8E370C7F2211A8E00004543B /* PaymentFlowData.swift */,
 				8E53D39321FE4C3500EACCE3 /* Utils */,
 				8E53D38D21FE4ACD00EACCE3 /* Scenes */,
 				8E53D38C21FE4ABA00EACCE3 /* API */,
@@ -708,6 +711,7 @@
 				8E53D3B521FE4DE300EACCE3 /* BankSelectionPresenter.swift in Sources */,
 				8E53D3C321FE4DFC00EACCE3 /* InstallmentSelectionRouter.swift in Sources */,
 				8ECD0C4F22010DB500687E0F /* SummaryTableViewCell.swift in Sources */,
+				8E370C802211A8E00004543B /* PaymentFlowData.swift in Sources */,
 				8E53D3F121FF461700EACCE3 /* MPEApi.swift in Sources */,
 				8E53D3D121FE4E0900EACCE3 /* SummaryViewController.swift in Sources */,
 				8E53D3D521FEA2EA00EACCE3 /* PaymentMethodsResponse.swift in Sources */,

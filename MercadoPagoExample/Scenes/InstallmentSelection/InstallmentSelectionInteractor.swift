@@ -19,9 +19,7 @@ protocol InstallmentSelectionBusinessLogic {
 
 protocol InstallmentSelectionDataStore {
     var installmentsResponse: InstallmentsResponse! { get set }
-    var amount: String! { get set }
-    var paymentMethod: PaymentMethodsElement! { get set }
-    var installment: PayerCost! { get set }
+    var paymentFlowBuilder: PaymentFlowDataBuilder! { get set }
 }
 
 class InstallmentSelectionInteractor: InstallmentSelectionBusinessLogic, InstallmentSelectionDataStore {
@@ -29,9 +27,7 @@ class InstallmentSelectionInteractor: InstallmentSelectionBusinessLogic, Install
     var worker: InstallmentSelectionWorker?
 
     var installmentsResponse: InstallmentsResponse!
-    var amount: String!
-    var paymentMethod: PaymentMethodsElement!
-    var installment: PayerCost!
+    var paymentFlowBuilder: PaymentFlowDataBuilder!
 
     func getInstallments() {
         let response = InstallmentSelection.Installment.Response(installmentsResponse: installmentsResponse)
@@ -39,7 +35,8 @@ class InstallmentSelectionInteractor: InstallmentSelectionBusinessLogic, Install
     }
 
     func getToSummary(request: InstallmentSelection.Summary.Request) {
-        installment = installmentsResponse[0].payerCosts[request.index]
+        let installment = installmentsResponse[0].payerCosts[request.index]
+        _ = paymentFlowBuilder.withSelectedInstallment(installment: installment)
         presenter?.presentSummary()
     }
 }

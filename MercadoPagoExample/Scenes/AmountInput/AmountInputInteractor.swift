@@ -17,18 +17,18 @@ protocol AmountInputBusinessLogic {
 }
 
 protocol AmountInputDataStore {
-    var amount: String! { get set }
+    var paymentFlowBuilder: PaymentFlowDataBuilder! { get set }
 }
 
 class AmountInputInteractor: AmountInputBusinessLogic, AmountInputDataStore {
     var presenter: AmountInputPresentationLogic?
     var worker: AmountInputWorker?
 
-    var amount: String!
+    var paymentFlowBuilder: PaymentFlowDataBuilder! = PaymentFlowDataBuilder()
 
     func textFieldDidChange(text: String) {
         if let amount = Int(text), amount > 10 {
-            self.amount = String(amount)
+            _ = self.paymentFlowBuilder.withAmount(amount: text)
             presenter?.presentEnabledContinueButton()
         } else {
             presenter?.presentDisabledContinueButton()

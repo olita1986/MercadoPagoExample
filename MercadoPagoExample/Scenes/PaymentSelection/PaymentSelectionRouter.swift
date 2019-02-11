@@ -45,7 +45,6 @@ class PaymentSelectionRouter: NSObject, PaymentSelectionRoutingLogic, PaymentSel
     func passDataToBankSelection(source: PaymentSelectionDataStore, destination: inout BankSelectionDataStore)
     {
         destination.bankIssuers = source.bankIssuers
-        destination.paymentMethod = source.paymentMethod
-        destination.amount = source.amount
+        destination.paymentFlowBuilder = source.paymentFlowBuilder
     }
 }

@@ -18,20 +18,17 @@ protocol PaymentSelectionBusinessLogic {
 }
 
 protocol PaymentSelectionDataStore {
-    var paymentMethods: PaymentMethodsResponse! { get set }
     var bankIssuers: BanksResponse! { get set }
-    var amount: String! { get set }
-    var paymentMethod: PaymentMethodsElement! { get set }
+    var paymentFlowBuilder: PaymentFlowDataBuilder! { get set }
 }
 
 class PaymentSelectionInteractor: PaymentSelectionBusinessLogic, PaymentSelectionDataStore {
     var presenter: PaymentSelectionPresentationLogic?
     var worker: PaymentSelectionWorker?
 
-    var paymentMethods: PaymentMethodsResponse!
+    private var paymentMethods: PaymentMethodsResponse!
     var bankIssuers: BanksResponse!
-    var amount: String!
-    var paymentMethod: PaymentMethodsElement!
+    var paymentFlowBuilder: PaymentFlowDataBuilder!
 
     let mpeApi: MPEApi
 
@@ -45,7 +42,7 @@ class PaymentSelectionInteractor: PaymentSelectionBusinessLogic, PaymentSelectio
             self?.presenter?.dismissLoading()
             if let paymentMethods = paymentMethodsResponse {
                 self?.paymentMethods = paymentMethods
-                let response = PaymentSelection.PaymentMethods.Response(paymentMethods: (self?.paymentMethods)!)
+                let response = PaymentSelection.PaymentMethods.Response(paymentMethods: paymentMethods)
                 self?.presenter?.presentView(response: response)
             } else {
                 self?.presenter?.presentError()
@@ -56,7 +53,7 @@ class PaymentSelectionInteractor: PaymentSelectionBusinessLogic, PaymentSelectio
     func getBankIssuers(request: PaymentSelection.BankIssuers.Request) {
         presenter?.presentLoading()
         let paymentMethod = paymentMethods[request.index]
-        self.paymentMethod = paymentMethod
+        _ = paymentFlowBuilder.withSelectedPaymentMethod(method: paymentMethod)
         mpeApi.getIssuers(withPaymentMethodId: paymentMethod.id) { [weak self](bankIssuersResponse) in
             self?.presenter?.dismissLoading()
             if let bankIssuers = bankIssuersResponse, bankIssuers.count > 0 {

@@ -44,11 +44,6 @@ class InstallmentSelectionRouter: NSObject, InstallmentSelectionRoutingLogic, In
 
     func passDataToSummary(source: InstallmentSelectionDataStore, destination: inout SummaryDataStore)
     {
-        destination.amount = source.amount
-        destination.installments = String(source.installment.installments)
-        destination.installmentValue = String(source.installment.installmentAmount)
-        destination.issuer = source.installmentsResponse[0].issuer.name
-        destination.paymentMethod = source.paymentMethod.name
-        destination.totalAmount = String(source.installment.totalAmount)
+        destination.paymentFlowBuilder = source.paymentFlowBuilder
     }
 }

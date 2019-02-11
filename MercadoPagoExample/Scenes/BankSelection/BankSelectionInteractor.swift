@@ -20,9 +20,7 @@ protocol BankSelectionBusinessLogic {
 protocol BankSelectionDataStore {
     var bankIssuers: BanksResponse! { get set }
     var installmentsResponse: InstallmentsResponse! { get set }
-    var amount: String! { get set }
-    var paymentMethod: PaymentMethodsElement! { get set }
-    var issuer: BanksResponseElement! { get set }
+    var paymentFlowBuilder: PaymentFlowDataBuilder! { get set }
 }
 
 class BankSelectionInteractor: BankSelectionBusinessLogic, BankSelectionDataStore {
@@ -31,9 +29,7 @@ class BankSelectionInteractor: BankSelectionBusinessLogic, BankSelectionDataStor
 
     var bankIssuers: BanksResponse!
     var installmentsResponse: InstallmentsResponse!
-    var amount: String!
-    var paymentMethod: PaymentMethodsElement!
-    var issuer: BanksResponseElement!
+    var paymentFlowBuilder: PaymentFlowDataBuilder!
 
     let mpeApi: MPEApi
 
@@ -49,8 +45,8 @@ class BankSelectionInteractor: BankSelectionBusinessLogic, BankSelectionDataStor
     func getInstallments(request: BankSelection.Installment.Request) {
         presenter?.presentLoading()
         let issuer = bankIssuers[request.index]
-        self.issuer = issuer
-        mpeApi.getInstallments(withPaymentMethodId: paymentMethod.id, amount: amount, issuerId: issuer.id) { [weak self](installments) in
+        let paymentData = paymentFlowBuilder.withSelectedIssuer(issuer: issuer).build()
+        mpeApi.getInstallments(withPaymentMethodId: paymentData.selectedPaymentMethod.id, amount: paymentData.amount, issuerId: issuer.id) { [weak self](installments) in
             self?.presenter?.dismissLoading()
             if let installmentsResponse = installments {
                 self?.installmentsResponse = installmentsResponse
